@@ -1,3 +1,8 @@
+import cultureBackground from "@/assets/background_media/agenda_culture.png";
+import environmentBackground from "@/assets/background_media/agenda_environment.png";
+import healthBackground from "@/assets/background_media/agenda_health.png";
+import womenBackground from "@/assets/background_media/agenda_women.png";
+import youthBackground from "@/assets/background_media/agenda_youth.png";
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
 import cultureIcon from "@/assets/icons/culture.png";
 import environmentIcon from "@/assets/icons/environment.png";
@@ -16,6 +21,7 @@ interface AgendaItem {
   id: string;
   title: string;
   icon: string;
+  background: string;
   bgColor: string;
   textColor: string;
   content: string;
@@ -30,6 +36,7 @@ const agendaItems: AgendaItem[] = [
     id: "ambiente",
     title: "AMBIENTE",
     icon: environmentIcon,
+    background: environmentBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
     content: PLACEHOLDER_WITH_1073_CHARS,
@@ -38,6 +45,7 @@ const agendaItems: AgendaItem[] = [
     id: "cultura",
     title: "CULTURA",
     icon: cultureIcon,
+    background: cultureBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
     content: PLACEHOLDER_WITH_1073_CHARS,
@@ -46,6 +54,7 @@ const agendaItems: AgendaItem[] = [
     id: "saude",
     title: "SAÚDE",
     icon: healthIcon,
+    background: healthBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
     content: PLACEHOLDER_WITH_1073_CHARS,
@@ -54,6 +63,7 @@ const agendaItems: AgendaItem[] = [
     id: "mulheres",
     title: "MULHERES",
     icon: womenIcon,
+    background: womenBackground,
     bgColor: "#FFFFFF",
     textColor: "#000000",
     content: PLACEHOLDER_WITH_1073_CHARS,
@@ -62,6 +72,7 @@ const agendaItems: AgendaItem[] = [
     id: "juventudes",
     title: "JUVENTUDES",
     icon: youthIcon,
+    background: youthBackground,
     bgColor: "#FFFFFF",
     textColor: "#000000",
     content: PLACEHOLDER_WITH_1073_CHARS,
@@ -147,7 +158,16 @@ export default function Agenda() {
             </DialogTitle>
           </DialogHeader>
           <div className="py-4">
-            <p className="font-retropix text-black">
+            <div
+              className="w-full overflow-hidden rounded-t-lg mb-2"
+              style={{
+                height: "100px",
+                backgroundImage: `url(${selectedAgenda?.background})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <p className="font-retropix text-black text-justify">
               {selectedAgenda?.content}
             </p>
           </div>
