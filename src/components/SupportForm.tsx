@@ -1,6 +1,6 @@
-import { JSX, useState } from "react";
-import { toast } from "sonner";
 import backgroundImage from "@/assets/background_media/static_image_1.png";
+import { useState } from "react";
+import { toast } from "sonner";
 
 interface FormData {
   name: string;

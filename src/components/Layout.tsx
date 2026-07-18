@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import stickerIcon from "@/assets/icons/sticker.png";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
+import { useEffect, useState } from "react";
 
 export default function Layout() {
   const [isVisible, setIsVisible] = useState(false);

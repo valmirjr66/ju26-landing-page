@@ -1,16 +1,16 @@
-import { useState } from "react";
+import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import cultureIcon from "@/assets/icons/culture.png";
+import environmentIcon from "@/assets/icons/environment.png";
+import healthIcon from "@/assets/icons/health.png";
+import womenIcon from "@/assets/icons/women.png";
+import youthIcon from "@/assets/icons/youth.png";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/shared/dialog";
-import environmentIcon from "@/assets/icons/environment.png";
-import cultureIcon from "@/assets/icons/culture.png";
-import healthIcon from "@/assets/icons/health.png";
-import womenIcon from "@/assets/icons/women.png";
-import youthIcon from "@/assets/icons/youth.png";
-import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import { useState } from "react";
 
 interface AgendaItem {
   id: string;

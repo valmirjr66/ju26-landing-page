@@ -1,11 +1,11 @@
-import { useState } from "react";
+import backgroundVideo from "@/assets/background_media/loop_video_2.mp4";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/shared/dialog";
-import backgroundVideo from "@/assets/background_media/loop_video_2.mp4";
+import { useState } from "react";
 
 export default function WhoAmI() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,9 +36,7 @@ export default function WhoAmI() {
               padding: "2rem",
             }}
           >
-            <h3 className="text-center mb-6 text-black">
-              MAIS QUE O VULGO
-            </h3>
+            <h3 className="text-center mb-6 text-black">MAIS QUE O VULGO</h3>
 
             <p className="font-retropix text-black text-justify mb-8 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do

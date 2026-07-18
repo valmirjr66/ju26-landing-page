@@ -1,9 +1,9 @@
+import Agenda from "@/components/Agenda";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
-import WhoAmI from "@/components/WhoAmI";
-import Agenda from "@/components/Agenda";
 import SupportForm from "@/components/SupportForm";
-import Footer from "@/components/Footer";
+import WhoAmI from "@/components/WhoAmI";
 
 export default function Home() {
   return (

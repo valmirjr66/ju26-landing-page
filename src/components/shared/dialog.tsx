@@ -157,9 +157,4 @@ function DialogTitle({
   );
 }
 
-export {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-};
+export { Dialog, DialogContent, DialogHeader, DialogTitle };

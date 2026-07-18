@@ -1,5 +1,5 @@
-import whatsappIcon from "@/assets/icons/whatsapp.png";
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPhoto from "@/assets/photos/ju_1.png";
 import InstagramIcon from "./shared/InstagramIcon";
 
