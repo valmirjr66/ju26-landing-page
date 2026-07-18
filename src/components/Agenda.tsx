@@ -16,6 +16,7 @@ import {
   DialogTitle,
 } from "@/components/shared/dialog";
 import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 interface AgendaItem {
   id: string;
@@ -109,7 +110,19 @@ export default function Agenda() {
 
         <div className="container mx-auto px-4">
           <h3 className="text-center mb-12 text-white drop-shadow-lg">
-            NOSSO PAPO
+            <TypeAnimation
+              sequence={[
+                "NOSSO PAPO",
+                3000,
+                "NOSSAS IDEIAS",
+                3000,
+                "NOSSA VOZ",
+                3000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">

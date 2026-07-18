@@ -55,6 +55,9 @@ importers:
       react-dom:
         specifier: ^19.2.1
         version: 19.2.1(react@19.2.1)
+      react-type-animation:
+        specifier: ^3.2.0
+        version: 3.2.0(prop-types@15.8.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.1(react@19.2.1))(react@19.2.1)
@@ -4213,6 +4216,13 @@ packages:
         integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==,
       }
 
+  loose-envify@1.4.0:
+    resolution:
+      {
+        integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==,
+      }
+    hasBin: true
+
   loupe@3.2.1:
     resolution:
       {
@@ -4681,6 +4691,13 @@ packages:
       }
     engines: { node: ">=0.10.0" }
 
+  object-assign@4.1.1:
+    resolution:
+      {
+        integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==,
+      }
+    engines: { node: ">=0.10.0" }
+
   object-inspect@1.13.4:
     resolution:
       {
@@ -4849,6 +4866,12 @@ packages:
     engines: { node: ">=14" }
     hasBin: true
 
+  prop-types@15.8.1:
+    resolution:
+      {
+        integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==,
+      }
+
   property-information@6.5.0:
     resolution:
       {
@@ -4943,6 +4966,12 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
 
+  react-is@16.13.1:
+    resolution:
+      {
+        integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
+      }
+
   react-markdown@10.1.0:
     resolution:
       {
@@ -5010,6 +5039,16 @@ packages:
     peerDependenciesMeta:
       "@types/react":
         optional: true
+
+  react-type-animation@3.2.0:
+    resolution:
+      {
+        integrity: sha512-WXTe0i3rRNKjmggPvT5ntye1QBt0ATGbijeW6V3cQe2W0jaMABXXlPPEdtofnS9tM7wSRHchEvI9SUw+0kUohw==,
+      }
+    peerDependencies:
+      prop-types: ^15.5.4
+      react: ">= 15.0.0"
+      react-dom: ">= 15.0.0"
 
   react@19.2.1:
     resolution:
@@ -8402,6 +8441,10 @@ snapshots:
 
   longest-streak@3.1.0: {}
 
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
   loupe@3.2.1: {}
 
   lru-cache@5.1.1:
@@ -8871,6 +8914,8 @@ snapshots:
 
   normalize-range@0.1.2: {}
 
+  object-assign@4.1.1: {}
+
   object-inspect@1.13.4: {}
 
   on-finished@2.4.1:
@@ -8957,6 +9002,12 @@ snapshots:
       typescript: 5.6.3
 
   prettier@3.6.2: {}
+
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
 
   property-information@6.5.0: {}
 
@@ -9063,6 +9114,8 @@ snapshots:
     dependencies:
       react: 19.2.1
 
+  react-is@16.13.1: {}
+
   react-markdown@10.1.0(@types/react@19.2.1)(react@19.2.1):
     dependencies:
       "@types/hast": 3.0.4
@@ -9120,6 +9173,12 @@ snapshots:
       tslib: 2.8.1
     optionalDependencies:
       "@types/react": 19.2.1
+
+  react-type-animation@3.2.0(prop-types@15.8.1)(react-dom@19.2.1(react@19.2.1))(react@19.2.1):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.2.1
+      react-dom: 19.2.1(react@19.2.1)
 
   react@19.2.1: {}
 
