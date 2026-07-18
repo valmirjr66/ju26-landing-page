@@ -180,7 +180,7 @@ export default function Agenda() {
                 backgroundPosition: "center",
               }}
             />
-            <p className="font-retropix text-black text-justify">
+            <p className="font-retropix text-black text-justify max-h-64 overflow-y-auto">
               {selectedAgenda?.content}
             </p>
           </div>
