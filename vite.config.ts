@@ -27,4 +27,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
+  base: "/ju26-landing-page/",
 });

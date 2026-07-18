@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://valmirjr66.github.io/ju26-landing-page/",
   "scripts": {
     "dev": "vite --host",
     "build": "rm -r _static 2>/dev/null; node sammy.js; vite build",
     "start": "NODE_ENV=production node sammy.js; serve -s _static -l tcp://0.0.0.0:$PORT -n",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -49,6 +51,7 @@
     "add": "^2.0.6",
     "autoprefixer": "^10.4.20",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.3.0",
     "pnpm": "^10.15.1",
     "postcss": "^8.4.47",
     "prettier": "^3.6.2",
