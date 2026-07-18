@@ -90,7 +90,7 @@ export default function WhoAmI() {
                 className="vaporwave-button"
                 aria-label="Saiba mais sobre MC Ju"
               >
-                SAIBA MAIS
+                MEUS CORRES
               </button>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function WhoAmI() {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-arcade">SAIBA MAIS</DialogTitle>
+            <DialogTitle className="font-arcade">MEUS CORRES</DialogTitle>
           </DialogHeader>
           <div
             className="py-4 overflow-y-auto font-retropix text-black"
