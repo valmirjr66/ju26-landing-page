@@ -34,7 +34,7 @@ export default function Layout() {
         }}
         aria-label="Navegação fixa"
       >
-        <div className="flex items-center justify-center h-16 px-4">
+        <div className="flex items-center justify-center h-22 px-4">
           <button
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
@@ -44,7 +44,7 @@ export default function Layout() {
             <img
               src={stickerIcon}
               alt="Voltar ao topo"
-              className="w-20 h-20 hover:scale-110 transition-transform"
+              className="w-25 h-25 hover:scale-110 transition-transform"
             />
           </button>
         </div>
