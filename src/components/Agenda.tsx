@@ -28,10 +28,6 @@ interface AgendaItem {
   content: string;
 }
 
-const PLACEHOLDER_WITH_1073_CHARS: string = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla, mi non semper placerat, elit libero bibendum est, laoreet ullamcorper sapien urna in urna. Phasellus efficitur eleifend erat eget varius. Fusce urna urna, varius fringilla dui non, cursus vehicula velit. Ut auctor pellentesque erat vel interdum. Aliquam mollis felis sem, vel consectetur orci tempus dapibus. Duis vel augue orci. Integer ut pharetra massa. Morbi vitae volutpat purus, sit amet consectetur lacus. Nullam pulvinar condimentum lacinia. Maecenas venenatis ut magna dictum consequat. Duis condimentum massa sit amet tincidunt eleifend. Nullam ut felis id odio viverra aliquam.
-
-Nunc viverra eleifend mattis. Maecenas id massa ac eros ullamcorper euismod. In hac habitasse platea dictumst. Cras sed sapien in tellus congue viverra. Mauris venenatis nec eros ut ultrices. Mauris ut magna vehicula, lacinia justo lobortis, efficitur risus. Aliquam quis mauris id nisi sodales consequat. Nulla placerat, risus sed auctor maximus, nisl leo bibendum ipsum, vitae mollis lacus sem laoreet neque.`;
-
 const agendaItems: AgendaItem[] = [
   {
     id: "ambiente",
@@ -40,7 +36,8 @@ const agendaItems: AgendaItem[] = [
     background: environmentBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
-    content: PLACEHOLDER_WITH_1073_CHARS,
+    content:
+      "Defender o meio ambiente é defender a vida. É defender quem perde a casa na enchente, quem sofre com o calor extremo, quem fica sem água, quem vive ao lado da mineração predatória e quem sempre paga a conta da destruição. Em Minas Gerais, conhecemos de perto o preço de colocar o lucro acima das pessoas. Mariana e Brumadinho não foram acidentes: foram consequências de escolhas políticas. Vamos enfrentar a crise climática com coragem, fortalecer a fiscalização ambiental, proteger nossos rios, serras e nascentes e investir em cidades mais verdes e preparadas para os desafios do futuro. Justiça ambiental também é justiça social. Não existe futuro possível sem enfrentar quem transforma a natureza em mercadoria.",
   },
   {
     id: "cultura",
@@ -49,7 +46,8 @@ const agendaItems: AgendaItem[] = [
     background: cultureBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
-    content: PLACEHOLDER_WITH_1073_CHARS,
+    content:
+      "A cultura não é um privilégio, é um direito. Uma ferramenta de transformação e uma das maiores riquezas do nosso povo. Foi através da cultura que milhares de jovens encontraram voz, pertencimento e oportunidade. O Hip Hop nos ensinou que arte também é educação, organização, consciência e resistência. Defender a cultura é defender quem vive dela: artistas, produtores, coletivos, técnicos e trabalhadores que movimentam a economia criativa todos os dias. Buscamos mais investimento permanente, ocupação dos espaços públicos, fortalecimento dos coletivos e valorização de quem faz cultura nas periferias e no interior. Porque um povo que produz cultura também produz liberdade.",
   },
   {
     id: "saude",
@@ -58,7 +56,8 @@ const agendaItems: AgendaItem[] = [
     background: healthBackground,
     bgColor: "#2A2A2A",
     textColor: "#FFFFFF",
-    content: PLACEHOLDER_WITH_1073_CHARS,
+    content:
+      "Saúde não começa no hospital ou consultório. A saúde começa quando existe comida no prato, moradia digna, trabalho digno com direitos, cultura, lazer, transporte e um meio ambiente saudável. Vejo todos os dias que adoecer não é apenas uma questão individual: é consequência das desigualdades que atravessam a vida do nosso povo. Defender o SUS é defender uma das maiores conquistas da democracia brasileira. Vamos lutar para fortalecer a atenção básica, ampliar o acesso à saúde mental, garantir atendimento digno às mulheres e enfrentar as causas do adoecimento da nossa geração. Cuidar da saúde é cuidar das pessoas antes que elas precisem adoecer.",
   },
   {
     id: "mulheres",
@@ -67,7 +66,8 @@ const agendaItems: AgendaItem[] = [
     background: womenBackground,
     bgColor: "#FFFFFF",
     textColor: "#000000",
-    content: PLACEHOLDER_WITH_1073_CHARS,
+    content:
+      "A democracia não existe enquanto as mulheres continuam ganhando menos, trabalhando mais e vivendo sob a ameaça da violência. Defender as mulheres é defender autonomia, dignidade e justiça. É garantir acesso à saúde, combate à violência de gênero, igualdade de oportunidades e participação nos espaços de decisão. Como médica, sei que muitas desigualdades começam antes mesmo de sair de casa. Como mulher, sei que nossos direitos nunca foram presentes, sempre foram conquistas. Vamos enfrentar o machismo estrutural e construir um país onde nenhuma mulher tenha medo de existir, ocupar espaços ou sonhar. A luta feminista é uma luta por uma sociedade mais justa para todas as pessoas.",
   },
   {
     id: "juventudes",
@@ -76,7 +76,8 @@ const agendaItems: AgendaItem[] = [
     background: youthBackground,
     bgColor: "#FFFFFF",
     textColor: "#000000",
-    content: PLACEHOLDER_WITH_1073_CHARS,
+    content:
+      "A juventude não é o futuro, é o presente. E já passou da hora de ocupar os espaços de decisão. Somos a geração que enfrenta a crise climática, a precarização do trabalho, o adoecimento mental e a falta de oportunidades, mas também somos a geração que produz cultura, organiza movimentos, cria soluções e transforma territórios. A política precisa deixar de falar sobre os jovens e começar a construir com os jovens. Queremos educação, cultura, trabalho digno, ciência, esporte, participação popular e direito de sonhar sem precisar abandonar nossas raízes. Quando a juventude ocupa a política, o futuro deixa de ser promessa e começa a ser construção coletiva.",
   },
 ];
 
