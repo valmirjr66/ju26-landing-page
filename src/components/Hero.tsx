@@ -36,7 +36,10 @@ export default function Hero() {
           Pré-candidata a Deputada Federal
         </h2>
 
-        <div className="bg-yellow-300 px-4 md:px-8 py-2 md:py-4 rounded-lg mb-1 md:mb-2 shadow-lg">
+        <div
+          className="px-2 md:px-4 py-2 md:py-4 mb-1 md:mb-2 shadow-lg"
+          style={{ backgroundColor: "rgba(253, 224, 71, 0.9)" }}
+        >
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
           </p>
