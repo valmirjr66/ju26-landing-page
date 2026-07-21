@@ -29,7 +29,7 @@ function TimelineItem({
         alt={imgAlt}
         className={`
       w-36 h-36 object-cover
-      ${reverseOrder ? "float-right" : "float-left mb-2"}
+      ${reverseOrder ? "float-right" : "float-left mb-2 mr-3"}
     `}
       />
 
