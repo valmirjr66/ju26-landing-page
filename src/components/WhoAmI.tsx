@@ -22,16 +22,18 @@ function TimelineItem({
   suppressMarginBottom?: boolean;
 }) {
   return (
-    <div
-      className={`${suppressMarginBottom || "mb-10"} flex ${reverseOrder ? "flex-row-reverse" : "flex-row"}`}
-    >
+    <div className={!suppressMarginBottom ? "mb-10" : ""}>
       <img
         src={img}
         alt={imgAlt}
-        style={{ width: 150 }}
-        className={reverseOrder ? "ml-5" : "mr-5"}
+        className={`
+      w-36 h-36 object-cover
+      ${reverseOrder ? "float-right" : "float-left mb-2"}
+    `}
       />
+
       <span className="text-justify">{text}</span>
+      <div className="clear-both" />
     </div>
   );
 }
