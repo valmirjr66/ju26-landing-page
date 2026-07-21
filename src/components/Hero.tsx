@@ -30,19 +30,19 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
       <div className="absolute bottom-2 z-10 flex flex-col items-center justify-center w-full px-4 text-center">
-        <h1 className="text-white drop-shadow-lg mb-4 md:mb-6">MC JU</h1>
+        <h1 className="text-white drop-shadow-lg mb-1 md:mb-1.5">MC JU</h1>
 
-        <h2 className="text-white drop-shadow-lg mb-8 md:mb-12 font-normal">
+        <h2 className="text-white drop-shadow-lg mb-2 md:mb-3 font-normal">
           Pré-candidata a Deputada Federal
         </h2>
 
-        <div className="bg-yellow-300 px-4 md:px-8 py-2 md:py-4 rounded-lg mb-8 md:mb-12 shadow-lg">
+        <div className="bg-yellow-300 px-4 md:px-8 py-2 md:py-4 rounded-lg mb-1 md:mb-2 shadow-lg">
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
           </p>
         </div>
 
-        <div className="flex mb-4">
+        <div className="flex mb-1">
           <InstagramIcon />
           <a
             href="https://wa.me"
