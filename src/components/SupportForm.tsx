@@ -1,7 +1,7 @@
 import backgroundImage from "@/assets/background_media/static_image_1.png";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface FormData {
   name: string;
@@ -33,6 +33,9 @@ function InputErrorMessage({ errors, fieldName }: InputErrorMessageProps) {
     )
   );
 }
+
+const API_URL = import.meta.env.VITE_API_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 function FormInput({
   id,
@@ -141,12 +144,13 @@ export default function SupportForm() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://mockurl.com/send", {
+      const response = await fetch(`${API_URL}/supporters`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": API_KEY,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, source: "dev" }),
       });
 
       if (response.ok) {
