@@ -1,6 +1,6 @@
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
-import juPhoto from "@/assets/photos/ju_1.png";
+import juPhoto from "@/assets/photos/ju_portrait_1.png";
 import InstagramIcon from "./shared/InstagramIcon";
 
 export default function Hero() {
@@ -38,7 +38,7 @@ export default function Hero() {
 
         <div
           className="px-2 md:px-4 py-2 md:py-4 mb-1 md:mb-2 shadow-lg"
-          style={{ backgroundColor: "rgba(151, 239, 213, 0.9)" }}
+          style={{ backgroundColor: "rgba(253, 224, 71, 0.9)" }}
         >
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
