@@ -8,6 +8,10 @@ import WhoAmI from "@/components/WhoAmI";
 export default function Home() {
   return (
     <div className="w-full min-h-screen bg-white">
+      <a href="#main-content" className="skip-to-content">
+        Pular para o conteúdo principal
+      </a>
+
       <Layout />
 
       <main id="main-content" className="w-full">
