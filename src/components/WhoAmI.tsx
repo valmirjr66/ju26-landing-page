@@ -4,6 +4,8 @@ import timelinePhoto2 from "@/assets/photos/timeline_2.png";
 import timelinePhoto3 from "@/assets/photos/timeline_3.png";
 import timelinePhoto4 from "@/assets/photos/timeline_4.png";
 import timelinePhoto5 from "@/assets/photos/timeline_5.png";
+import timelinePhoto6 from "@/assets/photos/timeline_6.png";
+import timelinePhoto7 from "@/assets/photos/timeline_7.png";
 import {
   Dialog,
   DialogContent,
@@ -162,9 +164,30 @@ export default function WhoAmI() {
             />
 
             <TimelineItem
-              suppressMarginBottom
               img={timelinePhoto5}
               imgAlt="Ju photo 5"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit."
+            />
+
+            <TimelineItem
+              reverseOrder
+              img={timelinePhoto6}
+              imgAlt="Ju photo 6"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit."
+            />
+
+            <TimelineItem
+              suppressMarginBottom
+              img={timelinePhoto7}
+              imgAlt="Ju photo 7"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
