@@ -2,6 +2,7 @@ import Agenda from "@/components/Agenda";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
+import Playlist from "@/components/Playlist";
 import SupportForm from "@/components/SupportForm";
 import WhoAmI from "@/components/WhoAmI";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <WhoAmI />
         <Agenda />
         <SupportForm />
+        <Playlist />
       </main>
 
       <Footer />
