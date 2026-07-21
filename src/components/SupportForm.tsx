@@ -1,6 +1,7 @@
 import backgroundImage from "@/assets/background_media/static_image_1.png";
 import { useState } from "react";
 import { toast } from "sonner";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface FormData {
   name: string;
@@ -185,16 +186,10 @@ export default function SupportForm() {
         >
           {isSubmitted ? (
             <div className="text-center py-8">
-              <p className="font-arcade text-2xl text-black mb-4">OK!</p>
+              <DotLottieReact src="/ok.lottie" autoplay />
               <p className="font-retropix text-black">
                 Obrigada pelo seu apoio! Entraremos em contato em breve.
               </p>
-              <button
-                onClick={() => setIsSubmitted(false)}
-                className="mt-6 vaporwave-button"
-              >
-                ENVIAR OUTRO
-              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
