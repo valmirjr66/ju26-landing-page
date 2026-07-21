@@ -38,7 +38,7 @@ export default function Hero() {
 
         <div
           className="px-2 md:px-4 py-2 md:py-4 mb-1 md:mb-2 shadow-lg"
-          style={{ backgroundColor: "rgba(253, 224, 71, 0.9)" }}
+          style={{ backgroundColor: "rgba(151, 239, 213, 0.9)" }}
         >
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
