@@ -22,23 +22,32 @@ export default function Hero() {
 
       <img
         src={juPhoto}
+        id="hero-main-photo"
         alt="MC Ju - Pré-candidata a Deputada Federal"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full object-cover m-auto"
       />
 
       {/* Dark Overlay for Text Contrast */}
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
       <div className="absolute bottom-2 z-10 flex flex-col items-center justify-center w-full px-4 text-center">
-        <h1 className="text-white drop-shadow-lg mb-1 md:mb-1.5">MC JU</h1>
+        <h1
+          className="text-white mb-1 md:mb-1.5"
+          style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
+        >
+          MC JU
+        </h1>
 
-        <h2 className="text-white drop-shadow-lg mb-2 md:mb-3 font-normal">
+        <h2
+          className="text-white mb-2 md:mb-3 font-normal"
+          style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
+        >
           Pré-candidata a Deputada Federal
         </h2>
 
         <div
           className="px-2 md:px-4 py-2 md:py-4 mb-1 md:mb-2 shadow-lg"
-          style={{ backgroundColor: "rgba(253, 224, 71, 0.9)" }}
+          style={{ backgroundColor: "rgb(253, 224, 71)" }}
         >
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
