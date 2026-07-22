@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/vaporwave_city.jpg";
+import backgroundImage from "@/assets/background_media/synthwave_landscape.png";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -173,7 +173,7 @@ export default function SupportForm() {
       className="relative w-full py-20 md:py-32 overflow-hidden"
       aria-label="Seção Formulário de Apoio"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
