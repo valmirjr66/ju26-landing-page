@@ -17,8 +17,8 @@ export default function Home() {
 
       <main id="main-content" className="w-full">
         <Hero />
-        <WhoAmI />
         <Agenda />
+        <WhoAmI />
         <SupportForm />
         <Playlist />
       </main>
