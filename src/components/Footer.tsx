@@ -31,7 +31,7 @@ export default function Footer() {
 
         <div className="text-center text-sm font-retropix text-black">
           <p>
-            Desenvolvido com 🩷 para uma campanha artística, audaz e afetuosa.
+            Desenvolvido com 🩷 para uma campanha artística, audaz e afetuosa
           </p>
         </div>
       </div>
