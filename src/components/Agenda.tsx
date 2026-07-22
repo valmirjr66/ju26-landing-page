@@ -3,7 +3,7 @@ import environmentBackground from "@/assets/background_media/agenda_environment.
 import healthBackground from "@/assets/background_media/agenda_health.png";
 import womenBackground from "@/assets/background_media/agenda_women.png";
 import youthBackground from "@/assets/background_media/agenda_youth.png";
-import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import backgroundImage from "@/assets/background_media/vaporwave_landscape.png";
 import cultureIcon from "@/assets/icons/culture.png";
 import environmentIcon from "@/assets/icons/environment.png";
 import healthIcon from "@/assets/icons/health.png";
@@ -98,17 +98,12 @@ export default function Agenda() {
         id="agenda"
         className="relative w-full py-20 md:py-32 overflow-hidden"
         aria-label="Seção Agenda"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          aria-hidden="true"
-        >
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
-
         <div className="container mx-auto px-4">
           <h3 className="text-center mb-12 text-white drop-shadow-lg">
             <TypeAnimation

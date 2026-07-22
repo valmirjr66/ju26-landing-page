@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/static_image_1.png";
+import backgroundImage from "@/assets/background_media/vaporwave_city.jpg";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState } from "react";
 import { toast } from "sonner";
