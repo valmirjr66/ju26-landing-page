@@ -138,15 +138,19 @@ export default function SupportForm() {
       newErrors.name = "Nome é obrigatório";
     }
 
-    if (!formData.email.trim()) {
-      newErrors.email = "E-mail é obrigatório";
-    } else if (!validateEmail(formData.email)) {
+    const hasEmail = formData.email.trim() !== "";
+    const hasWhatsapp = formData.whatsapp.trim() !== "";
+
+    if (!hasEmail && !hasWhatsapp) {
+      newErrors.email = "Informe um e-mail ou WhatsApp";
+      newErrors.whatsapp = "Informe um e-mail ou WhatsApp";
+    }
+
+    if (hasEmail && !validateEmail(formData.email)) {
       newErrors.email = "E-mail inválido";
     }
 
-    if (!formData.whatsapp.trim()) {
-      newErrors.whatsapp = "WhatsApp é obrigatório";
-    } else if (!validateWhatsApp(formData.whatsapp)) {
+    if (hasWhatsapp && !validateWhatsApp(formData.whatsapp)) {
       newErrors.whatsapp = "WhatsApp inválido";
     }
 
@@ -264,6 +268,10 @@ export default function SupportForm() {
         <InputErrorMessage errors={errors} fieldName="whatsapp" />
       </div>
 
+      <p className="text-xs text-center text-gray-600">
+        Informe pelo menos um meio de contato: e-mail ou WhatsApp.
+      </p>
+
       <div>
         <FormInput
           id="city"
@@ -323,10 +331,9 @@ export default function SupportForm() {
         <button
           type="submit"
           disabled={
-            !formData.name ||
-            !formData.email ||
-            !formData.whatsapp ||
-            !formData.city ||
+            !formData.name.trim() ||
+            (!formData.email.trim() && !formData.whatsapp.trim()) ||
+            !formData.city.trim() ||
             isLoading
           }
           className="vaporwave-button disabled:opacity-50 disabled:cursor-not-allowed"
