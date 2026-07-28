@@ -1,9 +1,11 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { useState } from "react";
+import { useMask } from "@react-input/mask";
+import { RefObject, useState } from "react";
 import { toast } from "sonner";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
+const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
 
 interface FormData {
   name: string;
@@ -24,6 +26,7 @@ interface FormInputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   errors: Record<string, string>;
+  ref?: RefObject<HTMLInputElement>;
 }
 
 function InputErrorMessage({ errors, fieldName }: InputErrorMessageProps) {
@@ -43,6 +46,7 @@ function FormInput({
   value,
   onChange,
   errors,
+  ref,
 }: FormInputProps) {
   return (
     <>
@@ -60,12 +64,18 @@ function FormInput({
         aria-label={title}
         aria-invalid={!!errors[id]}
         aria-describedby={errors[id] ? `${id}-error` : undefined}
+        ref={ref}
       />
     </>
   );
 }
 
 export default function SupportForm() {
+  const phoneNumberInputRef = useMask({
+    mask: "(__) _____-____",
+    replacement: { _: /\d/ },
+  });
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -149,7 +159,7 @@ export default function SupportForm() {
           "Content-Type": "application/json",
           "x-api-key": API_KEY,
         },
-        body: JSON.stringify({ ...formData, source: "dev" }),
+        body: JSON.stringify({ ...formData, source: ENVIRONMENT }),
       });
 
       if (response.ok) {
@@ -207,6 +217,7 @@ export default function SupportForm() {
           value={formData.whatsapp}
           onChange={handleChange}
           errors={errors}
+          ref={phoneNumberInputRef}
         />
         <InputErrorMessage errors={errors} fieldName="whatsapp" />
       </div>
