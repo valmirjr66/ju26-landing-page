@@ -1,6 +1,6 @@
 import backgroundImage from "@/assets/background_media/vaporwave_road.png";
 
-export default function Playlist() {
+export default function PlaylistSection() {
   return (
     <section
       id="playlist-embed"

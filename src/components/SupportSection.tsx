@@ -66,7 +66,7 @@ function FormInput({
   );
 }
 
-export default function SupportForm() {
+export default function SupportSection() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",

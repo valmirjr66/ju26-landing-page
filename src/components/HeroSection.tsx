@@ -3,7 +3,7 @@ import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPhoto from "@/assets/photos/ju_portrait_1.png";
 import InstagramIcon from "./shared/InstagramIcon";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section
       id="hero"

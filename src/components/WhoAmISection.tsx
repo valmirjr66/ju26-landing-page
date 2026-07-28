@@ -44,7 +44,7 @@ function TimelineItem({
   );
 }
 
-export default function WhoAmI() {
+export default function WhoAmISection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

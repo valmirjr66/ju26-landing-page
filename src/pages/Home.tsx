@@ -1,10 +1,10 @@
-import Agenda from "@/components/Agenda";
+import AgendaSection from "@/components/AgendaSection";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+import HeroSection from "@/components/HeroSection";
 import Layout from "@/components/Layout";
-import Playlist from "@/components/Playlist";
-import SupportForm from "@/components/SupportForm";
-import WhoAmI from "@/components/WhoAmI";
+import PlaylistSection from "@/components/PlaylistSection";
+import SupportSection from "@/components/SupportSection";
+import WhoAmISection from "@/components/WhoAmISection";
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
       <Layout />
 
       <main id="main-content" className="w-full">
-        <Hero />
-        <Agenda />
-        <WhoAmI />
-        <SupportForm />
-        <Playlist />
+        <HeroSection />
+        <AgendaSection />
+        <WhoAmISection />
+        <SupportSection />
+        <PlaylistSection />
       </main>
 
       <Footer />

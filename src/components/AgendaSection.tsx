@@ -81,7 +81,7 @@ const agendaItems: AgendaItem[] = [
   },
 ];
 
-export default function Agenda() {
+export default function AgendaSection() {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
