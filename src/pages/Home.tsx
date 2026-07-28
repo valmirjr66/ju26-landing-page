@@ -18,8 +18,8 @@ export default function Home() {
       <main id="main-content" className="w-full">
         <HeroSection />
         <SupportSection />
-        <AgendaSection />
         <WhoAmISection />
+        <AgendaSection />
         <PlaylistSection />
       </main>
 
