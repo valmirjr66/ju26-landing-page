@@ -1,4 +1,4 @@
-import psolIcon from "@/assets/icons/psol.png";
+import psolIcon from "@/assets/icons/psol.svg";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
