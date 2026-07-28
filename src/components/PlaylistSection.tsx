@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/vaporwave_road.png";
+import backgroundImage from "@/assets/background_media/vaporwave_road.jpg";
 
 export default function PlaylistSection() {
   return (

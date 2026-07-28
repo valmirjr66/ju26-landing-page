@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/synthwave_landscape.png";
+import backgroundImage from "@/assets/background_media/synthwave_landscape.jpg";
 import SupportForm from "./shared/SupportForm";
 
 export default function SupportSection() {

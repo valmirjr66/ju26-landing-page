@@ -3,10 +3,11 @@ import { useMask } from "@react-input/mask";
 import { RefObject, useState } from "react";
 import { toast } from "sonner";
 
-const API_URL = import.meta.env.VITE_API_URL;
-const API_KEY = import.meta.env.VITE_API_KEY;
-const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
-const TERM_URL = import.meta.env.VITE_TERM_URL ?? "";
+const API_URL = "https://ju26-api-883258931528.southamerica-east1.run.app/api";
+const API_KEY = "f4b47201-78e2-4d4c-8679-f48b1137e9a7";
+const ENVIRONMENT = "prod";
+const TERM_URL =
+  "https://ju26publicfiles.blob.core.windows.net/main/termo_consentimento.pdf";
 
 interface FormData {
   name: string;
