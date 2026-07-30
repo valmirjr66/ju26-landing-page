@@ -46,7 +46,7 @@ export default function HeroSection() {
         </h2>
 
         <div
-          className="px-2 md:px-4 py-2 md:py-4 mb-1 md:mb-2 shadow-lg"
+          className="px-2 md:px-4 py-1 md:py-2 mb-1 md:mb-2 shadow-lg"
           style={{ backgroundColor: "rgb(253, 224, 71)" }}
         >
           <p className="font-retropix text-base md:text-lg font-bold text-black">
