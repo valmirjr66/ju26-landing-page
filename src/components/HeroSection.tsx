@@ -45,6 +45,8 @@ export default function HeroSection() {
           Candidata a Deputada Federal
         </h2>
 
+        {/* 
+        TODO: uncomment this
         <div
           className="px-2 md:px-4 py-1 md:py-2 mb-1 md:mb-2 shadow-lg"
           style={{ backgroundColor: "rgb(253, 224, 71)" }}
@@ -52,7 +54,7 @@ export default function HeroSection() {
           <p className="font-retropix text-base md:text-lg font-bold text-black">
             Arte, Audácia e Afeto
           </p>
-        </div>
+        </div> */}
 
         <div className="flex mb-1">
           <InstagramIcon />
