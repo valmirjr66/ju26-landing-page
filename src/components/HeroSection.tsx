@@ -35,14 +35,14 @@ export default function HeroSection() {
           className="text-white mb-1 md:mb-1.5"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
-          JU MC
+          @jumc037
         </h1>
 
         <h2
           className="text-white mb-2 md:mb-3 font-normal"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
-          Pré-candidata a Deputada Federal
+          Candidata a Deputada Federal
         </h2>
 
         <div
