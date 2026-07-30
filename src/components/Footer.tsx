@@ -12,7 +12,7 @@ export default function Footer() {
             <p className="font-retropix text-black mb-1">
               Pré-candidata a Deputada Federal
             </p>
-            <p className="font-retropix text-black mb-1">contato@jumc037.org</p>
+            <p className="font-retropix text-black mb-1">contato@jumc037.com</p>
             <p className="font-retropix text-black">
               Copyright © {currentYear}
             </p>
