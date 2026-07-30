@@ -316,7 +316,7 @@ export default function SupportForm() {
         <div className="border-t-1 border-b-1 border-yellow-500 p-2">
           <span className="font-retropix text-black text-justify text-xs">
             Ao enviar as informações, você autoriza o uso dos seus dados para
-            comunicação da pré-campanha de Áurea Carolina, conforme o{" "}
+            comunicação da pré-campanha de Júlia Soares, conforme o{" "}
             <a href={TERM_URL} className="underline text-blue-800">
               Termo de Consentimento
             </a>
