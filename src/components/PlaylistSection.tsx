@@ -9,7 +9,7 @@ export default function PlaylistSection() {
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
       }}
     >
       <div className="container mx-auto px-4 max-w-xl md:max-w-2xl">
