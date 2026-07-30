@@ -28,7 +28,7 @@ export default function Layout() {
             : "-translate-y-full opacity-0"
         }`}
         style={{
-          backgroundColor: "#97EFD5",
+          backgroundColor: "#53C5A3",
           pointerEvents: isVisible ? "auto" : "none",
         }}
         aria-label="Navegação fixa"
