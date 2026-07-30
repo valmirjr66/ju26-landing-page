@@ -110,7 +110,7 @@ export default function WhoAmISection() {
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="vaporwave-button"
-                aria-label="Saiba mais sobre MC Ju"
+                aria-label="Saiba mais sobre Ju MC"
               >
                 MEUS CORRES
               </button>

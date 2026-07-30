@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative w-full h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden"
-      aria-label="Hero section - MC Ju 037"
+      aria-label="Hero section - Ju MC 037"
     >
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -23,7 +23,7 @@ export default function HeroSection() {
       <img
         src={juPhoto}
         id="hero-main-photo"
-        alt="MC Ju - Pré-candidata a Deputada Federal"
+        alt="Ju MC - Pré-candidata a Deputada Federal"
         className="absolute inset-0 h-full object-cover m-auto"
       />
 
@@ -35,7 +35,7 @@ export default function HeroSection() {
           className="text-white mb-1 md:mb-1.5"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
-          MC JU
+          JU MC
         </h1>
 
         <h2
