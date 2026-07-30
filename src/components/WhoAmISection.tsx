@@ -56,6 +56,7 @@ export default function WhoAmISection() {
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
+          playsInline
           muted
           loop
           aria-hidden="true"
