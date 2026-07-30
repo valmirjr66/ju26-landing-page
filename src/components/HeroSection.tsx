@@ -1,5 +1,4 @@
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
-import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPhoto from "@/assets/photos/ju_portrait_1.png";
 import InstagramIcon from "./shared/InstagramIcon";
 
@@ -57,6 +56,7 @@ export default function HeroSection() {
 
         <div className="flex mb-1">
           <InstagramIcon />
+          {/* TODO: uncomment snippet bellow
           <a
             href="https://wa.me"
             target="_blank"
@@ -69,7 +69,7 @@ export default function HeroSection() {
               alt="WhatsApp"
               className="w-10 h-10 md:w-12 md:h-12 hover:scale-110 transition-transform"
             />
-          </a>
+          </a> */}
         </div>
 
         <svg

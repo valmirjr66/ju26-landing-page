@@ -1,5 +1,4 @@
 import stickerIcon from "@/assets/icons/sticker.png";
-import whatsappIcon from "@/assets/icons/whatsapp.png";
 import { useEffect, useState } from "react";
 
 export default function Layout() {
@@ -50,6 +49,7 @@ export default function Layout() {
         </div>
       </header>
 
+      {/* TODO: uncomment snippet bellow
       <a
         href="https://wa.me"
         target="_blank"
@@ -65,7 +65,7 @@ export default function Layout() {
             animation: "pulse 2s infinite",
           }}
         />
-      </a>
+      </a> */}
     </>
   );
 }
