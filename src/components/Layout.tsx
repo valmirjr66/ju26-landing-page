@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/vaporwave_grid.jpg";
+import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
 import stickerIcon from "@/assets/icons/sticker.png";
 import { useEffect, useState } from "react";
 
@@ -23,7 +23,7 @@ export default function Layout() {
   return (
     <>
       <header
-        className={`fixed top-0 right-0 left-0 z-40 shadow-lg transition-all duration-300 ease-out ${
+        className={`fixed top-0 right-0 left-0 z-40 transition-all duration-300 ease-out ${
           isVisible
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
@@ -31,22 +31,23 @@ export default function Layout() {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "bottom",
+          backgroundPosition: "center",
           pointerEvents: isVisible ? "auto" : "none",
+          boxShadow: "0px 5px 30px black",
         }}
-        aria-label="Navegação fixa"
       >
-        <div className="flex h-20 items-center justify-center px-4">
+        <div className="relative h-20">
           <button
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
-            className="icon-button"
             title="Voltar ao topo"
+            className="absolute top-0 left-1/2 -translate-x-1/2"
           >
             <img
+              id="header-sticker"
               src={stickerIcon}
               alt="Voltar ao topo"
-              className="h-24 w-24 transition-transform hover:scale-110"
+              className="h-24 w-24 origin-top transition-transform hover:scale-110"
             />
           </button>
         </div>
