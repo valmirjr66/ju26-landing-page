@@ -236,4 +236,16 @@
       transform: scale(1.1);
     }
   }
+
+  @keyframes header-background-pan {
+    0% {
+      background-position: center calc(50% - 5px);
+    }
+    50% {
+      background-position: center calc(50% + 5px);
+    }
+    100% {
+      background-position: center calc(50% - 5px);
+    }
+  }
 }

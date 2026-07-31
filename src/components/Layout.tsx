@@ -31,7 +31,7 @@ export default function Layout() {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          animation: "header-background-pan 8s ease-in-out infinite",
           pointerEvents: isVisible ? "auto" : "none",
           boxShadow: "0px 5px 30px black",
         }}
