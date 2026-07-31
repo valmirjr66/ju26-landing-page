@@ -158,7 +158,6 @@ export default function AgendaSection() {
         </div>
       </section>
 
-      {/* Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
