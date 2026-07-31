@@ -239,13 +239,13 @@
 
   @keyframes header-background-pan {
     0% {
-      background-position: center calc(50% - 5px);
+      background-position: calc(50% - 5px) center ;
     }
     50% {
-      background-position: center calc(50% + 5px);
+      background-position: calc(50% + 5px) center ;
     }
     100% {
-      background-position: center calc(50% - 5px);
+      background-position: calc(50% - 5px) center ;
     }
   }
 }
