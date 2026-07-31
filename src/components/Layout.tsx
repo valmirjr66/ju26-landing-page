@@ -1,3 +1,4 @@
+import backgroundImage from "@/assets/background_media/vaporwave_grid.jpg";
 import stickerIcon from "@/assets/icons/sticker.png";
 import { useEffect, useState } from "react";
 
@@ -28,12 +29,14 @@ export default function Layout() {
             : "-translate-y-full opacity-0"
         }`}
         style={{
-          backgroundColor: "#53C5A3",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           pointerEvents: isVisible ? "auto" : "none",
         }}
         aria-label="Navegação fixa"
       >
-        <div className="flex items-center justify-center h-22 px-4">
+        <div className="flex items-center justify-center h-20 px-4">
           <button
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
@@ -43,7 +46,7 @@ export default function Layout() {
             <img
               src={stickerIcon}
               alt="Voltar ao topo"
-              className="w-25 h-25 hover:scale-110 transition-transform"
+              className="w-24 h-24 hover:scale-110 transition-transform"
             />
           </button>
         </div>
