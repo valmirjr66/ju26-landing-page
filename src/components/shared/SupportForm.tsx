@@ -43,7 +43,7 @@ interface CheckboxInputProps {
 
 function CheckboxInput({ id, label, checked, onChange }: CheckboxInputProps) {
   return (
-    <label className="flex items-start gap-3 cursor-pointer">
+    <label className="flex cursor-pointer items-start gap-3">
       <input
         id={id}
         name={id}
@@ -60,7 +60,7 @@ function CheckboxInput({ id, label, checked, onChange }: CheckboxInputProps) {
 function InputErrorMessage({ errors, fieldName }: InputErrorMessageProps) {
   return (
     errors[fieldName] && (
-      <p id={`${fieldName}-error`} className="text-red-600 text-sm mt-1">
+      <p id={`${fieldName}-error`} className="mt-1 text-sm text-red-600">
         {errors[fieldName]}
       </p>
     )
@@ -88,7 +88,7 @@ function FormInput({
         placeholder={title.toUpperCase()}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-3 font-arcade text-black bg-white border-2 border-black rounded-lg focus:outline-2 focus:outline-offset-2 focus:outline-pink-500"
+        className="font-arcade w-full rounded-lg border-2 border-black bg-white px-4 py-3 text-black focus:outline-2 focus:outline-offset-2 focus:outline-pink-500"
         aria-label={title}
         aria-invalid={!!errors[id]}
         aria-describedby={errors[id] ? `${id}-error` : undefined}
@@ -223,7 +223,7 @@ export default function SupportForm() {
   };
 
   return isSubmitted ? (
-    <div className="text-center py-8">
+    <div className="py-8 text-center">
       <DotLottieReact src="/ok.lottie" autoplay />
       <p className="font-retropix text-black">
         Obrigada pelo seu apoio! Entraremos em contato em breve.
@@ -268,7 +268,7 @@ export default function SupportForm() {
         <InputErrorMessage errors={errors} fieldName="whatsapp" />
       </div>
 
-      <p className="text-xs text-center text-gray-600">
+      <p className="text-center text-xs text-gray-600">
         Informe pelo menos um meio de contato: e-mail ou WhatsApp.
       </p>
 
@@ -314,10 +314,10 @@ export default function SupportForm() {
         />
 
         <div className="border-t-1 border-b-1 border-yellow-500 p-2">
-          <span className="font-retropix text-black text-justify text-xs">
+          <span className="font-retropix text-justify text-xs text-black">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da pré-campanha de Júlia Soares, conforme o{" "}
-            <a href={TERM_URL} className="underline text-blue-800">
+            <a href={TERM_URL} className="text-blue-800 underline">
               Termo de Consentimento
             </a>
             . Seus dados serão protegidos e utilizados exclusivamente para
@@ -336,7 +336,7 @@ export default function SupportForm() {
             !formData.city.trim() ||
             isLoading
           }
-          className="vaporwave-button disabled:opacity-50 disabled:cursor-not-allowed"
+          className="vaporwave-button disabled:cursor-not-allowed disabled:opacity-50"
           aria-label="Enviar formulário de apoio"
         >
           {isLoading ? "ENVIANDO..." : "ENVIAR"}

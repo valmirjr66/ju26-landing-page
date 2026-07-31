@@ -96,7 +96,7 @@ export default function AgendaSection() {
     <>
       <section
         id="agenda"
-        className="relative w-full py-20 md:py-32 overflow-hidden"
+        className="relative w-full overflow-hidden py-20 md:py-32"
         aria-label="Seção Agenda"
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -105,7 +105,7 @@ export default function AgendaSection() {
         }}
       >
         <div className="container mx-auto px-4">
-          <h3 className="text-center mb-12 text-white drop-shadow-lg">
+          <h3 className="mb-12 text-center text-white drop-shadow-lg">
             <TypeAnimation
               sequence={[
                 "NOSSO PAPO",
@@ -121,34 +121,34 @@ export default function AgendaSection() {
             />
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-5">
             {agendaItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
-                className="group relative rounded-2xl overflow-hidden border-2 border-white transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300 cursor-pointer"
+                className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-white transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
                 style={{
                   backgroundColor: item.bgColor,
                   color: item.textColor,
                 }}
                 aria-label={`${item.title} - clique para mais informações`}
               >
-                <div className="p-4 flex flex-col items-center justify-center min-h-64 md:min-h-56">
+                <div className="flex min-h-64 flex-col items-center justify-center p-4 md:min-h-56">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="w-20 h-20 md:w-24 md:h-24 mb-4 object-contain"
+                    className="mb-4 h-20 w-20 object-contain md:h-24 md:w-24"
                   />
 
-                  <h4 className="font-arcade text-lg md:text-base text-center font-bold">
+                  <h4 className="font-arcade text-center text-lg font-bold md:text-base">
                     {item.title}
                   </h4>
                 </div>
                 <div
-                  className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   aria-hidden="true"
                 >
-                  <span className="text-white font-arcade font-bold">
+                  <span className="font-arcade font-bold text-white">
                     SAIBA MAIS
                   </span>
                 </div>
@@ -167,7 +167,7 @@ export default function AgendaSection() {
           </DialogHeader>
           <div className="py-4">
             <div
-              className="w-full overflow-hidden rounded-t-lg mb-2"
+              className="mb-2 w-full overflow-hidden rounded-t-lg"
               style={{
                 height: "100px",
                 backgroundImage: `url(${selectedAgenda?.background})`,
@@ -175,7 +175,7 @@ export default function AgendaSection() {
                 backgroundPosition: "center",
               }}
             />
-            <p className="font-retropix text-black text-justify max-h-64 overflow-y-auto">
+            <p className="font-retropix max-h-64 overflow-y-auto text-justify text-black">
               {selectedAgenda?.content}
             </p>
           </div>

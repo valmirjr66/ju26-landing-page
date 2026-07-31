@@ -12,7 +12,7 @@ export default function InstagramIcon() {
       <img
         src={instagramIcon}
         alt="Instagram"
-        className="w-10 h-10 hover:scale-110 transition-transform"
+        className="h-10 w-10 transition-transform hover:scale-110"
       />
     </a>
   );

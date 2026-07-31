@@ -4,7 +4,7 @@ export default function PlaylistSection() {
   return (
     <section
       id="playlist-embed"
-      className="relative w-full py-20 md:py-32 overflow-hidden"
+      className="relative w-full overflow-hidden py-20 md:py-32"
       aria-label="Seção Playlist"
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -12,8 +12,8 @@ export default function PlaylistSection() {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="container mx-auto px-4 max-w-xl md:max-w-2xl">
-        <h3 className="text-center mb-12 text-white">
+      <div className="container mx-auto max-w-xl px-4 md:max-w-2xl">
+        <h3 className="mb-12 text-center text-white">
           UMA PLAYLIST FALA MAIS QUE MIL PALAVRAS
         </h3>
         <iframe

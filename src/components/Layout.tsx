@@ -23,7 +23,7 @@ export default function Layout() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 shadow-lg transition-all duration-300 ease-out ${
+        className={`fixed top-0 right-0 left-0 z-40 shadow-lg transition-all duration-300 ease-out ${
           isVisible
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
@@ -36,7 +36,7 @@ export default function Layout() {
         }}
         aria-label="Navegação fixa"
       >
-        <div className="flex items-center justify-center h-20 px-4">
+        <div className="flex h-20 items-center justify-center px-4">
           <button
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
@@ -46,7 +46,7 @@ export default function Layout() {
             <img
               src={stickerIcon}
               alt="Voltar ao topo"
-              className="w-24 h-24 hover:scale-110 transition-transform"
+              className="h-24 w-24 transition-transform hover:scale-110"
             />
           </button>
         </div>

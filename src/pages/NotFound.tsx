@@ -9,24 +9,24 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="flex min-h-screen w-full items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
       <div
         data-slot="card"
-        className="flex flex-col rounded-xl py-6 w-full max-w-lg shadow-lg border-0 bg-white/80"
+        className="flex w-full max-w-lg flex-col rounded-xl border-0 bg-white/80 py-6 shadow-lg"
       >
-        <div data-slot="card-content" className="pt-8 pb-8 px-6 text-center">
-          <div className="flex justify-center mb-6">
+        <div data-slot="card-content" className="px-6 pt-8 pb-8 text-center">
+          <div className="mb-6 flex justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
+              <div className="absolute inset-0 animate-pulse rounded-full bg-red-100" />
               <AlertCircle className="relative h-16 w-16 text-red-500" />
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+          <h1 className="mb-2 text-4xl font-bold text-slate-900">404</h1>
 
-          <h2 className="text-xl text-slate-700 mb-4">Página não encontrada</h2>
+          <h2 className="mb-4 text-xl text-slate-700">Página não encontrada</h2>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <button
               onClick={handleGoHome}
               className="vaporwave-button"

@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <footer className="w-full py-6 md:py-8" aria-label="Rodapé">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex-1 text-center md:text-left">
-            <h4 className="font-arcade text-2xl text-black mb-2">JU MC 037</h4>
-            <p className="font-retropix text-black mb-1">
+            <h4 className="font-arcade mb-2 text-2xl text-black">JU MC 037</h4>
+            <p className="font-retropix mb-1 text-black">
               Pré-candidata a Deputada Federal
             </p>
-            <p className="font-retropix text-black mb-1">contato@jumc037.com</p>
+            <p className="font-retropix mb-1 text-black">contato@jumc037.com</p>
             <p className="font-retropix text-black">
               Copyright © {currentYear}
             </p>
@@ -22,14 +22,14 @@ export default function Footer() {
             <img
               src={psolIcon}
               alt="PSOL - Partido Socialismo e Liberdade"
-              className="w-20 h-20 md:w-28 md:h-28 object-contain"
+              className="h-20 w-20 object-contain md:h-28 md:w-28"
             />
           </div>
         </div>
 
         <hr className="my-4 border-black/20" />
 
-        <div className="text-center text-sm font-retropix text-black">
+        <div className="font-retropix text-center text-sm text-black">
           <p>
             Desenvolvido com 🩷 para uma campanha cheia de arte, audácia e afeto
           </p>

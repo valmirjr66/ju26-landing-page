@@ -31,10 +31,7 @@ function TimelineItem({
       <img
         src={img}
         alt={imgAlt}
-        className={`
-      w-36 h-36 object-cover
-      ${reverseOrder ? "float-right" : "float-left mb-2 mr-3"}
-    `}
+        className={`h-36 w-36 object-cover ${reverseOrder ? "float-right" : "float-left mr-3 mb-2"} `}
       />
 
       <span className="text-justify">{text}</span>
@@ -50,11 +47,11 @@ export default function WhoAmISection() {
     <>
       <section
         id="who-am-i"
-        className="relative w-full py-20 md:py-32 overflow-hidden"
+        className="relative w-full overflow-hidden py-20 md:py-32"
         aria-label="Seção Quem Sou Eu"
       >
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           playsInline
           muted
@@ -64,7 +61,7 @@ export default function WhoAmISection() {
           <source src={backgroundVideo} type="video/mp4" />
         </video>
 
-        <div className="container mx-auto px-4 max-w-2xl">
+        <div className="container mx-auto max-w-2xl px-4">
           <div
             style={{
               backgroundColor: "var(--primary)",
@@ -73,9 +70,9 @@ export default function WhoAmISection() {
               padding: "2rem",
             }}
           >
-            <h3 className="text-center mb-6 text-black">MAIS QUE O VULGO</h3>
+            <h3 className="mb-6 text-center text-black">MAIS QUE O VULGO</h3>
 
-            <p className="font-retropix text-black text-justify mb-8 leading-relaxed">
+            <p className="font-retropix mb-8 text-justify leading-relaxed text-black">
               Eu sou a Ju. Estou há 9 anos na luta coletiva, batalhando por
               justiça social e climática.
               <br />
@@ -125,7 +122,7 @@ export default function WhoAmISection() {
             <DialogTitle className="font-arcade">MEUS CORRES</DialogTitle>
           </DialogHeader>
           <div
-            className="py-4 overflow-y-auto font-retropix text-black"
+            className="font-retropix overflow-y-auto py-4 text-black"
             style={{ maxHeight: 400 }}
           >
             <TimelineItem

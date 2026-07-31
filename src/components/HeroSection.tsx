@@ -6,11 +6,11 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative flex h-screen min-h-screen w-full flex-col items-center justify-center overflow-hidden"
       aria-label="Hero section - Ju MC 037"
     >
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         playsInline
         muted
@@ -24,22 +24,22 @@ export default function HeroSection() {
         src={juPhoto}
         id="hero-main-photo"
         alt="Ju MC - Pré-candidata a Deputada Federal"
-        className="absolute inset-0 h-full object-cover m-auto"
+        className="absolute inset-0 m-auto h-full object-cover"
       />
 
       {/* Dark Overlay for Text Contrast */}
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
-      <div className="absolute bottom-2 z-10 flex flex-col items-center justify-center w-full px-4 text-center">
+      <div className="absolute bottom-2 z-10 flex w-full flex-col items-center justify-center px-4 text-center">
         <h1
-          className="text-white mb-1 md:mb-1.5"
+          className="mb-1 text-white md:mb-1.5"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
           @jumc037
         </h1>
 
         <h2
-          className="text-white mb-2 md:mb-3 font-normal"
+          className="mb-2 font-normal text-white md:mb-3"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
           Candidata a Deputada Federal
@@ -56,7 +56,7 @@ export default function HeroSection() {
           </p>
         </div> */}
 
-        <div className="flex mb-1">
+        <div className="mb-1 flex">
           <InstagramIcon />
           {/* TODO: uncomment snippet bellow
           <a
@@ -75,7 +75,7 @@ export default function HeroSection() {
         </div>
 
         <svg
-          className="w-6 h-6 text-white animate-bounce"
+          className="h-6 w-6 animate-bounce text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

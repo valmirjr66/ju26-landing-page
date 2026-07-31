@@ -5,7 +5,7 @@ export default function SupportSection() {
   return (
     <section
       id="support-form"
-      className="relative w-full py-20 md:py-32 overflow-hidden"
+      className="relative w-full overflow-hidden py-20 md:py-32"
       aria-label="Seção Formulário de Apoio"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${backgroundImage})`,
@@ -13,8 +13,8 @@ export default function SupportSection() {
         backgroundPosition: "center",
       }}
     >
-      <div className="container mx-auto px-4 max-w-xl md:max-w-2xl">
-        <h3 className="text-center mb-12 text-white">COLA COM A GENTE!</h3>
+      <div className="container mx-auto max-w-xl px-4 md:max-w-2xl">
+        <h3 className="mb-12 text-center text-white">COLA COM A GENTE!</h3>
 
         <div
           style={{

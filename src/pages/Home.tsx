@@ -8,7 +8,7 @@ import WhoAmISection from "@/components/WhoAmISection";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-white">
+    <div className="min-h-screen w-full bg-white">
       <a href="#main-content" className="skip-to-content">
         Pular para o conteúdo principal
       </a>
