@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
+import backgroundImage from "@/assets/background_media/cloudy_sky_pink.jpg";
 import stickerIcon from "@/assets/icons/sticker.png";
 import { useEffect, useState } from "react";
 
