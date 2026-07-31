@@ -33,7 +33,7 @@ export default function Layout() {
           backgroundSize: "cover",
           animation: "header-background-pan 8s ease-in-out infinite",
           pointerEvents: isVisible ? "auto" : "none",
-          boxShadow: "0px 5px 30px black",
+          boxShadow: "0px 0px 20px black",
         }}
       >
         <div className="relative h-20">
