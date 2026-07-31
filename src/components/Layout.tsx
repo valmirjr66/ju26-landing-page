@@ -31,7 +31,7 @@ export default function Layout() {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "bottom",
           pointerEvents: isVisible ? "auto" : "none",
         }}
         aria-label="Navegação fixa"
