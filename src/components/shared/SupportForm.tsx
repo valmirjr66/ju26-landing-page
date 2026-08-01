@@ -224,7 +224,13 @@ export default function SupportForm() {
 
   return isSubmitted ? (
     <div className="py-8 text-center">
-      <DotLottieReact src="/ok.lottie" autoplay />
+      <DotLottieReact
+        src="/ok.lottie"
+        autoplay
+        style={{
+          filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4))",
+        }}
+      />
       <p className="font-retropix text-black">
         Obrigada pelo seu apoio! Entraremos em contato em breve.
       </p>
