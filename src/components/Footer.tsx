@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex-1 text-center md:text-left">
             <h4 className="font-arcade mb-2 text-2xl text-black">JU MC 037</h4>
-            <p className="font-retropix mb-1 text-black">
+            <p className="font-retropix text-black">
               Pré-candidata a Deputada Federal
             </p>
-            <p className="font-retropix mb-1 text-black">contato@jumc037.com</p>
+            <p className="font-retropix text-black">contato@jumc037.com</p>
             <p className="font-retropix text-black">
               Copyright © {currentYear}
             </p>
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-4 border-black/20" />
+        <hr className="my-2 border-black/20" />
 
         <div className="font-retropix text-center text-sm text-black">
           <p>
