@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "rm -r _static 2>/dev/null; node sammy.js; vite build",
+    "build": "rm -r _static 2>/dev/null; node sammy.js; VITE_ENVIRONMENT=prod vite build",
     "start": "NODE_ENV=production node sammy.js; serve -s _static -l tcp://0.0.0.0:$PORT -n",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
