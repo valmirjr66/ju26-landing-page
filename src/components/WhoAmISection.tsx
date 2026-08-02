@@ -31,7 +31,7 @@ function TimelineItem({
       <img
         src={img}
         alt={imgAlt}
-        className={`h-36 w-36 object-cover ${reverseOrder ? "float-right" : "float-left mr-3 mb-2"} `}
+        className={`h-36 w-36 rounded-sm object-cover ${reverseOrder ? "float-right" : "float-left mr-3 mb-2"} `}
       />
 
       <span className="text-justify">{text}</span>
