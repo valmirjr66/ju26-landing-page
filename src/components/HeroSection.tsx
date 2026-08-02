@@ -1,4 +1,5 @@
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPhoto from "@/assets/photos/ju_portrait_1.png";
 import InstagramIcon from "./shared/InstagramIcon";
 
@@ -12,10 +13,12 @@ export default function HeroSection() {
       <video
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
-        playsInline
         muted
         loop
         aria-hidden="true"
+        playsInline
+        preload="auto"
+        disablePictureInPicture
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
@@ -58,9 +61,8 @@ export default function HeroSection() {
 
         <div className="mb-1 flex">
           <InstagramIcon />
-          {/* TODO: uncomment snippet bellow
           <a
-            href="https://wa.me"
+            href="https://chat.whatsapp.com/FkJKTafjgb67w1chNIN8wE?s=sw&p=i&mlu=4&amv=1"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contato via WhatsApp"
@@ -69,9 +71,9 @@ export default function HeroSection() {
             <img
               src={whatsappIcon}
               alt="WhatsApp"
-              className="w-10 h-10 md:w-12 md:h-12 hover:scale-110 transition-transform"
+              className="h-10 w-10 transition-transform hover:scale-110 md:h-12 md:w-12"
             />
-          </a> */}
+          </a>
         </div>
 
         <svg

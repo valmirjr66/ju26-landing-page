@@ -53,10 +53,12 @@ export default function WhoAmISection() {
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
-          playsInline
           muted
           loop
           aria-hidden="true"
+          playsInline
+          preload="auto"
+          disablePictureInPicture
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>

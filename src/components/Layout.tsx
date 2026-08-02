@@ -1,5 +1,6 @@
 import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
 import stickerIcon from "@/assets/icons/sticker.png";
+import whatsappIcon from "@/assets/icons/whatsapp.png";
 import { useEffect, useState } from "react";
 
 export default function Layout() {
@@ -53,23 +54,22 @@ export default function Layout() {
         </div>
       </header>
 
-      {/* TODO: uncomment snippet bellow
       <a
-        href="https://wa.me"
+        href="https://chat.whatsapp.com/FkJKTafjgb67w1chNIN8wE?s=sw&p=i&mlu=4&amv=1"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contato via WhatsApp"
-        className={`fixed bottom-6 right-6 z-40 icon-button transition-all duration-300 ease-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
+        className={`icon-button fixed right-6 bottom-6 z-40 transition-all duration-300 ease-out ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
         <img
           src={whatsappIcon}
           alt="WhatsApp"
-          className="w-12 h-12 hover:scale-110 transition-transform drop-shadow-lg"
+          className="h-12 w-12 drop-shadow-lg transition-transform hover:scale-110"
           style={{
             animation: "pulse 2s infinite",
           }}
         />
-      </a> */}
+      </a>
     </>
   );
 }
