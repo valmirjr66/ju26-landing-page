@@ -176,7 +176,10 @@ export default function AgendaSection() {
                 backgroundPosition: "center",
               }}
             />
-            <p className="font-retropix max-h-64 overflow-y-auto text-justify text-black">
+            <p
+              className="font-retropix max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black"
+              style={{ border: "1px solid #dbdbdb" }}
+            >
               {selectedAgenda?.content}
             </p>
           </div>
