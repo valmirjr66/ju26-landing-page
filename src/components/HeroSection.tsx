@@ -1,21 +1,9 @@
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPhoto from "@/assets/photos/ju_portrait_1.png";
-import { useEffect, useRef } from "react";
 import InstagramIcon from "./shared/InstagramIcon";
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.play().catch(err => {
-      console.error("Video play failed:", err);
-    });
-  }, []);
-
   return (
     <section
       id="hero"
@@ -29,7 +17,6 @@ export default function HeroSection() {
         loop
         aria-hidden="true"
         playsInline
-        preload="auto"
         disablePictureInPicture
       >
         <source src={backgroundVideo} type="video/mp4" />

@@ -57,7 +57,6 @@ export default function WhoAmISection() {
           loop
           aria-hidden="true"
           playsInline
-          preload="auto"
           disablePictureInPicture
         >
           <source src={backgroundVideo} type="video/mp4" />
