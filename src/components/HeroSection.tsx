@@ -38,7 +38,7 @@ export default function HeroSection() {
       <img
         src={juPhoto}
         id="hero-main-photo"
-        alt="Ju MC - Pré-candidata a Deputada Federal"
+        alt="Ju MC - Candidata a Deputada Federal"
         className="absolute inset-0 m-auto h-full object-cover"
       />
 

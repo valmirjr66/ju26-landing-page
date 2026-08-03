@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex-1 text-center md:text-left">
             <h4 className="font-arcade mb-2 text-2xl text-black">JU MC 037</h4>
             <p className="font-retropix text-black">
-              Pré-candidata a Deputada Federal
+              Candidata a Deputada Federal
             </p>
             <p className="font-retropix text-black">contato@jumc037.com</p>
             <p className="font-retropix text-black">
