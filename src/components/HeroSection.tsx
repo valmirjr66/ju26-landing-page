@@ -32,21 +32,23 @@ export default function HeroSection() {
       {/* Dark Overlay for Text Contrast */}
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
 
-      <div className="absolute bottom-2 z-10 flex w-full flex-col items-center justify-center px-4 text-center">
+      <div
+        id="header-collection"
+        className="absolute bottom-8 z-10 flex w-full flex-col items-center justify-center px-4 text-center md:bottom-12"
+      >
+        {" "}
         <h1
           className="mb-1 text-white md:mb-1.5"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
           @jumc037
         </h1>
-
         <h2
           className="mb-2 font-normal text-white md:mb-3"
           style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
         >
           Candidata a Deputada Federal
         </h2>
-
         {/* 
         TODO: uncomment this
         <div
@@ -57,7 +59,6 @@ export default function HeroSection() {
             Arte, Audácia e Afeto
           </p>
         </div> */}
-
         <div className="mb-1 flex">
           <InstagramIcon />
           <a
@@ -74,7 +75,6 @@ export default function HeroSection() {
             />
           </a>
         </div>
-
         <svg
           className="h-6 w-6 animate-bounce text-white"
           fill="none"
