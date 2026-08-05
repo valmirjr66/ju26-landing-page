@@ -134,11 +134,11 @@ export default function AgendaSection() {
                 }}
                 aria-label={`${item.title} - clique para mais informações`}
               >
-                <div className="flex min-h-64 flex-col items-center justify-center p-4 md:min-h-56">
+                <div className="flex min-h-54 flex-col items-center justify-center p-2 md:min-h-56">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="mb-4 h-20 w-20 object-contain md:h-24 md:w-24"
+                    className="mb-4 h-20 w-20 object-contain"
                   />
 
                   <h4 className="font-arcade text-center text-lg font-bold md:text-base">
