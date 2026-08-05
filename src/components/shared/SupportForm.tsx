@@ -1,102 +1,16 @@
+import { type FormData } from "@/types/SupportForm";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useMask } from "@react-input/mask";
-import { RefObject, useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
+import CheckboxInput from "./CheckboxInput";
+import FormInput, { InputErrorMessage } from "./FormInput";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
 const TERM_URL = import.meta.env.VITE_TERM_URL;
-
-interface FormData {
-  name: string;
-  email: string;
-  whatsapp: string;
-  city: string;
-  check_supportSocialMedia: boolean;
-  check_supportStreets: boolean;
-  check_supportArt: boolean;
-  check_receiveMaterial: boolean;
-}
-
-interface InputErrorMessageProps {
-  errors: Record<string, string>;
-  fieldName: string;
-}
-
-interface FormInputProps {
-  id: string;
-  type: string;
-  title: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  errors: Record<string, string>;
-  ref?: RefObject<HTMLInputElement>;
-}
-
-interface CheckboxInputProps {
-  id: keyof FormData;
-  label: string;
-  checked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-function CheckboxInput({ id, label, checked, onChange }: CheckboxInputProps) {
-  return (
-    <label className="flex cursor-pointer items-start gap-3">
-      <input
-        id={id}
-        name={id}
-        type="checkbox"
-        checked={checked}
-        onChange={onChange}
-        className="h-5 w-5 shrink-0 accent-pink-500"
-      />
-      <span className="font-retropix text-black">{label}</span>
-    </label>
-  );
-}
-
-function InputErrorMessage({ errors, fieldName }: InputErrorMessageProps) {
-  return (
-    errors[fieldName] && (
-      <p id={`${fieldName}-error`} className="mt-1 text-sm text-red-600">
-        {errors[fieldName]}
-      </p>
-    )
-  );
-}
-
-function FormInput({
-  id,
-  type,
-  title,
-  value,
-  onChange,
-  errors,
-  ref,
-}: FormInputProps) {
-  return (
-    <>
-      <label htmlFor={id} className="sr-only">
-        {title}
-      </label>
-      <input
-        id={id}
-        type={type}
-        name={id}
-        placeholder={title.toUpperCase()}
-        value={value}
-        onChange={onChange}
-        className="font-arcade w-full rounded-lg border-2 border-black bg-white px-4 py-3 text-black focus:outline-2 focus:outline-offset-2 focus:outline-pink-500"
-        aria-label={title}
-        aria-invalid={!!errors[id]}
-        aria-describedby={errors[id] ? `${id}-error` : undefined}
-        ref={ref}
-      />
-    </>
-  );
-}
+const ENABLE_ART_UPLOAD = import.meta.env.VITE_ENABLE_ART_UPLOAD === "true";
 
 export default function SupportForm() {
   const phoneNumberInputRef = useMask({
@@ -118,6 +32,18 @@ export default function SupportForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [artFile, setArtFile] = useState<File | null>(null);
+
+  const ALLOWED_FILE_TYPES = [
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+    "video/mp4",
+    "video/webm",
+  ];
+
+  const MAX_IMAGE_SIZE_BYTES = 10 * 1024 * 1024; // 10 MB
+  const MAX_VIDEO_SIZE_BYTES = 25 * 1024 * 1024; // 25 MB
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -164,7 +90,35 @@ export default function SupportForm() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked, files } = e.target;
+
+    if (type === "file") {
+      const file = files?.[0] ?? null;
+
+      if (file && !ALLOWED_FILE_TYPES.includes(file.type)) {
+        toast.error("Formato de arquivo não suportado.");
+        e.target.value = "";
+        return;
+      }
+
+      if (file) {
+        const isVideo = file.type.startsWith("video/");
+        const maxSize = isVideo ? MAX_VIDEO_SIZE_BYTES : MAX_IMAGE_SIZE_BYTES;
+
+        if (file.size > maxSize) {
+          toast.error(
+            isVideo
+              ? "O vídeo deve ter no máximo 25 MB."
+              : "A imagem deve ter no máximo 10 MB."
+          );
+          e.target.value = "";
+          return;
+        }
+      }
+
+      setArtFile(file);
+      return;
+    }
 
     setFormData(prev => ({
       ...prev,
@@ -176,6 +130,10 @@ export default function SupportForm() {
         ...prev,
         [name]: "",
       }));
+    }
+
+    if (name === "check_supportArt" && !checked) {
+      setArtFile(null);
     }
   };
 
@@ -190,13 +148,39 @@ export default function SupportForm() {
     setIsLoading(true);
 
     try {
+      const body = new FormData();
+
+      body.append("name", formData.name);
+      body.append("email", formData.email);
+      body.append("whatsapp", formData.whatsapp);
+      body.append("city", formData.city);
+
+      body.append(
+        "check_supportSocialMedia",
+        String(formData.check_supportSocialMedia)
+      );
+      body.append(
+        "check_supportStreets",
+        String(formData.check_supportStreets)
+      );
+      body.append("check_supportArt", String(formData.check_supportArt));
+      body.append(
+        "check_receiveMaterial",
+        String(formData.check_receiveMaterial)
+      );
+
+      body.append("source", ENVIRONMENT);
+
+      if (artFile) {
+        body.append("artFile", artFile);
+      }
+
       const response = await fetch(`${API_URL}/supporters`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           "x-api-key": API_KEY,
         },
-        body: JSON.stringify({ ...formData, source: ENVIRONMENT }),
+        body,
       });
 
       if (response.ok) {
@@ -212,6 +196,7 @@ export default function SupportForm() {
           check_supportArt: false,
           check_receiveMaterial: false,
         });
+        setArtFile(null);
       } else {
         toast.error("Erro ao enviar formulário. Tente novamente.");
       }
@@ -311,6 +296,30 @@ export default function SupportForm() {
           onChange={handleChange}
           label="Quero contribuir com a minha arte"
         />
+
+        {ENABLE_ART_UPLOAD && formData.check_supportArt && (
+          <div className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4">
+            <p className="font-retropix text-xs text-black">
+              Você pode enviar uma obra (imagem ou vídeo) agora ou, se preferir,
+              finalizar o cadastro e nos enviar depois. Entraremos em contato
+              para combinar os detalhes.
+            </p>
+
+            <input
+              type="file"
+              name="artFile"
+              accept=".png,.jpg,.jpeg,.webp,.mp4,.mov,.webm"
+              onChange={handleChange}
+              className="file:font-retropix block w-full text-sm text-black file:mr-4 file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
+            />
+
+            <p className="text-xs text-gray-600">
+              Formatos aceitos:{" "}
+              {ALLOWED_FILE_TYPES.map(type => type.split("/")[1]).join(", ")}.
+              Limite: 10 MB para imagens e 25 MB para vídeos.
+            </p>
+          </div>
+        )}
 
         <CheckboxInput
           id="check_receiveMaterial"
