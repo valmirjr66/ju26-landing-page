@@ -72,7 +72,7 @@ export default function HeroSection() {
           className="mb-1 px-2 py-1 shadow-lg md:mb-2 md:px-4 md:py-2"
           style={{ backgroundColor: "rgb(253, 224, 71)" }}
         >
-          <p className="text-base font-bold text-black md:text-lg">
+          <p className="text-base font-brush-up text-black md:text-lg">
             Arte, Audácia e Afeto
           </p>
         </div>
