@@ -1,4 +1,5 @@
-import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
+import textureNature from "@/assets/background_media/texture_nature.jpg";
+import horizontalLogo from "@/assets/icons/horizontal_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
 import juPortrait2 from "@/assets/photos/ju_portrait_2.png";
@@ -23,26 +24,19 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative flex h-screen min-h-screen w-full flex-col items-center justify-center overflow-hidden"
-      aria-label="Hero section - Ju 5037"
+      aria-label="Hero section - JU 5037"
+      style={{
+        backgroundImage: `url(${textureNature})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        aria-hidden="true"
-        playsInline
-        disablePictureInPicture
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-      </video>
-
       {PORTRAITS.map((src, index) => (
         <img
           key={src}
           src={src}
           id={"hero-ju-portrait"}
-          alt="Ju 5037 - Candidata a Deputada Federal"
+          alt="JU 5037 - Candidata a Deputada Federal"
           aria-hidden={index !== activeIndex}
           className="absolute inset-0 m-auto h-full object-cover transition-opacity duration-700 ease-in-out"
           style={{
@@ -55,12 +49,12 @@ export default function HeroSection() {
         id="header-collection"
         className="absolute bottom-8 z-10 flex w-full flex-col items-center justify-center px-4 text-center md:bottom-12"
       >
-        {" "}
-        <h1
-          className="mb-1 text-white md:mb-1.5"
-          style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
-        >
-          @jumc037
+        <h1 className="mb-2 md:mb-3">
+          <img
+            src={horizontalLogo}
+            alt="JU 5037"
+            className="mx-auto h-auto w-[min(90vw,28rem)] drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)]"
+          />
         </h1>
         <h2
           className="mb-2 font-normal text-white md:mb-3"
@@ -72,7 +66,7 @@ export default function HeroSection() {
           className="mb-1 px-2 py-1 shadow-lg md:mb-2 md:px-4 md:py-2"
           style={{ backgroundColor: "rgb(253, 224, 71)" }}
         >
-          <p className="text-base font-brush-up text-black md:text-lg">
+          <p className="font-brush-up text-base text-black md:text-lg">
             Arte, Audácia e Afeto
           </p>
         </div>
