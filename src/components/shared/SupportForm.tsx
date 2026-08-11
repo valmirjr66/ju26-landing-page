@@ -332,7 +332,7 @@ export default function SupportForm() {
           <span className="font-retropix text-justify text-xs text-black">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da pré-campanha de Júlia Soares, conforme o{" "}
-            <a href={TERM_URL} className="text-blue-800 underline">
+            <a href={TERM_URL} target="_blank" className="text-blue-800 underline">
               Termo de Consentimento
             </a>
             . Seus dados serão protegidos e utilizados exclusivamente para
