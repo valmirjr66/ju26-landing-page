@@ -59,18 +59,11 @@ export default function HeroSection() {
         </h1>
         <h2
           className="mb-2 font-normal text-white md:mb-3"
-          style={{ textShadow: "5px 5px 5px rgba(0, 0, 0, 0.5)" }}
+          style={{ textShadow: "5px 5px 3px rgba(0, 0, 0, 0.8)" }}
         >
           Candidata a Deputada Federal
         </h2>
-        <div
-          className="mb-1 px-2 py-1 shadow-lg md:mb-2 md:px-4 md:py-2"
-          style={{ backgroundColor: "rgb(253, 224, 71)" }}
-        >
-          <p className="font-brush-up text-base text-black md:text-lg">
-            Arte, Audácia e Afeto
-          </p>
-        </div>
+        <div className="font-brush-up mb-1 md:mb-2">Arte, Audácia e Afeto</div>
         <div className="mb-1 flex">
           <InstagramIcon />
           <a
