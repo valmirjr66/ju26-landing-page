@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex-1 text-center md:text-left">
-            <h4 className="mb-2 text-2xl text-black">Ju 5037</h4>
+            <h4 className="mb-2 text-2xl text-black">JU 5037</h4>
             <p className="text-black">
               Candidata a Deputada Federal
             </p>

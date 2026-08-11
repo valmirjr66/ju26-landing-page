@@ -30,7 +30,7 @@ export default function NotFound() {
             <button
               onClick={handleGoHome}
               className="vaporwave-button"
-              aria-label="Saiba mais sobre Ju 5037"
+              aria-label="Saiba mais sobre JU 5037"
             >
               VOLTAR
             </button>
