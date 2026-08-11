@@ -23,7 +23,7 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative flex h-screen min-h-screen w-full flex-col items-center justify-center overflow-hidden"
-      aria-label="Hero section - Ju MC 037"
+      aria-label="Hero section - Ju 5037"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -42,7 +42,7 @@ export default function HeroSection() {
           key={src}
           src={src}
           id={"hero-ju-portrait"}
-          alt="Ju MC - Candidata a Deputada Federal"
+          alt="Ju 5037 - Candidata a Deputada Federal"
           aria-hidden={index !== activeIndex}
           className="absolute inset-0 m-auto h-full object-cover transition-opacity duration-700 ease-in-out"
           style={{
