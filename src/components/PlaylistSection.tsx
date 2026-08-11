@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/vaporwave_road.jpg";
+import backgroundImage from "@/assets/background_media/texture_paper.jpg";
 
 export default function PlaylistSection() {
   return (
@@ -13,9 +13,9 @@ export default function PlaylistSection() {
       }}
     >
       <div className="container mx-auto max-w-xl px-4 md:max-w-2xl">
-        <h3 className="mb-12 text-center text-white">
+        <h2 className="mb-12 text-center text-black">
           UMA PLAYLIST FALA MAIS QUE MIL PALAVRAS
-        </h3>
+        </h2>
         <iframe
           data-testid="embed-iframe"
           style={{ borderRadius: 12 }}
