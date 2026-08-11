@@ -1,5 +1,5 @@
 import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
-import stickerIcon from "@/assets/icons/sticker.png";
+import logo from "@/assets/icons/vertical_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
 import { useEffect, useState } from "react";
 
@@ -45,8 +45,8 @@ export default function Layout() {
             className="absolute top-0 left-1/2 -translate-x-1/2"
           >
             <img
-              id="header-sticker"
-              src={stickerIcon}
+              id="header-logo"
+              src={logo}
               alt="Voltar ao topo"
               className="h-24 w-24 origin-top transition-transform hover:scale-110"
             />
