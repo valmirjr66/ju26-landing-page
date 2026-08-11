@@ -162,9 +162,7 @@ export default function AgendaSection() {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>
-              {selectedAgenda?.title}
-            </DialogTitle>
+            <DialogTitle>{selectedAgenda?.title}</DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <div
@@ -176,10 +174,7 @@ export default function AgendaSection() {
                 backgroundPosition: "center",
               }}
             />
-            <p
-              className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black"
-              style={{ border: "1px solid #dbdbdb" }}
-            >
+            <p className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black">
               {selectedAgenda?.content}
             </p>
           </div>
