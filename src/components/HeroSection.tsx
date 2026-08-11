@@ -1,6 +1,6 @@
-import textureNature from "@/assets/background_media/texture_nature.jpg";
+import textureNature from "@/assets/background_media/texture_nature_yellow.svg";
 import horizontalLogo from "@/assets/icons/horizontal_logo.png";
-import whatsappIcon from "@/assets/icons/whatsapp.png";
+import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
 import juPortrait2 from "@/assets/photos/ju_portrait_2.png";
 import { useEffect, useState } from "react";
@@ -29,6 +29,7 @@ export default function HeroSection() {
         backgroundImage: `url(${textureNature})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: "#ef7a1e",
       }}
     >
       {PORTRAITS.map((src, index) => (

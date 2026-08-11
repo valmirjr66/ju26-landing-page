@@ -1,4 +1,4 @@
-import instagramIcon from "@/assets/icons/instagram.png";
+import instagramIcon from "@/assets/icons/instagram.svg";
 
 export default function InstagramIcon() {
   return (

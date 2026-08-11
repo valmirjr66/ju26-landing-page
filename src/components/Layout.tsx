@@ -1,6 +1,6 @@
 import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
 import logo from "@/assets/icons/vertical_logo.png";
-import whatsappIcon from "@/assets/icons/whatsapp.png";
+import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import { useEffect, useState } from "react";
 
 export default function Layout() {
