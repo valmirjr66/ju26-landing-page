@@ -1,9 +1,24 @@
 import backgroundVideo from "@/assets/background_media/loop_video_1.mp4";
 import whatsappIcon from "@/assets/icons/whatsapp.png";
-import juPhoto from "@/assets/photos/ju_portrait_1.png";
+import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
+import juPortrait2 from "@/assets/photos/ju_portrait_2.png";
+import { useEffect, useState } from "react";
 import InstagramIcon from "./shared/InstagramIcon";
 
+const PORTRAITS = [juPortrait1, juPortrait2] as const;
+const SWAP_INTERVAL_MS = 3000;
+
 export default function HeroSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % PORTRAITS.length);
+    }, SWAP_INTERVAL_MS);
+
+    return () => window.clearInterval(id);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -22,15 +37,19 @@ export default function HeroSection() {
         <source src={backgroundVideo} type="video/mp4" />
       </video>
 
-      <img
-        src={juPhoto}
-        id="hero-main-photo"
-        alt="Ju MC - Candidata a Deputada Federal"
-        className="absolute inset-0 m-auto h-full object-cover"
-      />
-
-      {/* Dark Overlay for Text Contrast */}
-      <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
+      {PORTRAITS.map((src, index) => (
+        <img
+          key={src}
+          src={src}
+          id={"hero-ju-portrait"}
+          alt="Ju MC - Candidata a Deputada Federal"
+          aria-hidden={index !== activeIndex}
+          className="absolute inset-0 m-auto h-full object-cover transition-opacity duration-700 ease-in-out"
+          style={{
+            opacity: index === activeIndex ? 1 : 0,
+          }}
+        />
+      ))}
 
       <div
         id="header-collection"
@@ -49,16 +68,14 @@ export default function HeroSection() {
         >
           Candidata a Deputada Federal
         </h2>
-        {/* 
-        TODO: uncomment this
         <div
-          className="px-2 md:px-4 py-1 md:py-2 mb-1 md:mb-2 shadow-lg"
+          className="mb-1 px-2 py-1 shadow-lg md:mb-2 md:px-4 md:py-2"
           style={{ backgroundColor: "rgb(253, 224, 71)" }}
         >
-          <p className="font-retropix text-base md:text-lg font-bold text-black">
+          <p className="text-base font-bold text-black md:text-lg">
             Arte, Audácia e Afeto
           </p>
-        </div> */}
+        </div>
         <div className="mb-1 flex">
           <InstagramIcon />
           <a
