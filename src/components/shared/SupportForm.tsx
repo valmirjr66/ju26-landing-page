@@ -216,7 +216,7 @@ export default function SupportForm() {
           filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4))",
         }}
       />
-      <p className="font-retropix text-black">
+      <p className="font-paper-crease text-black text-xl">
         Obrigada pelo seu apoio! Entraremos em contato em breve.
       </p>
     </div>
@@ -299,7 +299,7 @@ export default function SupportForm() {
 
         {ENABLE_ART_UPLOAD && formData.check_supportArt && (
           <div className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4">
-            <p className="font-retropix text-xs text-black">
+            <p className="text-xs text-black">
               Você pode enviar uma obra (imagem ou vídeo) agora ou, se preferir,
               finalizar o cadastro e nos enviar depois. Entraremos em contato
               para combinar os detalhes.
@@ -310,7 +310,7 @@ export default function SupportForm() {
               name="artFile"
               accept=".png,.jpg,.jpeg,.webp,.mp4,.mov,.webm"
               onChange={handleChange}
-              className="file:font-retropix block w-full text-sm text-black file:mr-4 file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
+              className="file:block w-full text-sm text-black file:mr-4 file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
             />
 
             <p className="text-xs text-gray-600">
@@ -329,7 +329,7 @@ export default function SupportForm() {
         />
 
         <div className="border-t-1 border-b-1 border-yellow-500 p-2">
-          <span className="font-retropix text-justify text-xs text-black">
+          <span className="text-justify text-xs text-black leading-tight">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da campanha de Júlia Soares, conforme o{" "}
             <a href={TERM_URL} className="text-blue-800 underline">

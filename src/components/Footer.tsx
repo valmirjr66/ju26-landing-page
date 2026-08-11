@@ -8,12 +8,12 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex-1 text-center md:text-left">
-            <h4 className="font-arcade mb-2 text-2xl text-black">JU MC 037</h4>
-            <p className="font-retropix text-black">
+            <h4 className="mb-2 text-2xl text-black">JU MC 037</h4>
+            <p className="text-black">
               Candidata a Deputada Federal
             </p>
-            <p className="font-retropix text-black">contato@jumc037.com</p>
-            <p className="font-retropix text-black">
+            <p className="text-black">contato@jumc037.com</p>
+            <p className="text-black">
               Copyright © {currentYear}
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function Footer() {
 
         <hr className="my-2 border-black/20" />
 
-        <div className="font-retropix text-center text-sm text-black">
+        <div className="text-center text-sm text-black">
           <p>
             Desenvolvido com 🩷 para uma campanha cheia de arte, audácia e afeto
           </p>

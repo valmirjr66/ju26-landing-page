@@ -141,7 +141,7 @@ export default function AgendaSection() {
                     className="mb-4 h-20 w-20 object-contain"
                   />
 
-                  <h4 className="font-arcade text-center text-lg font-bold md:text-base">
+                  <h4 className="text-center text-lg font-bold md:text-base">
                     {item.title}
                   </h4>
                 </div>
@@ -149,7 +149,7 @@ export default function AgendaSection() {
                   className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   aria-hidden="true"
                 >
-                  <span className="font-arcade font-bold text-white">
+                  <span className="font-brush-up font-bold text-white">
                     SAIBA MAIS
                   </span>
                 </div>
@@ -162,7 +162,7 @@ export default function AgendaSection() {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-arcade">
+            <DialogTitle>
               {selectedAgenda?.title}
             </DialogTitle>
           </DialogHeader>
@@ -177,7 +177,7 @@ export default function AgendaSection() {
               }}
             />
             <p
-              className="font-retropix max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black"
+              className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black"
               style={{ border: "1px solid #dbdbdb" }}
             >
               {selectedAgenda?.content}

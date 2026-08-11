@@ -37,7 +37,7 @@ export default function FormInput({
         placeholder={title.toUpperCase()}
         value={value}
         onChange={onChange}
-        className="font-arcade w-full rounded-lg border-2 border-black bg-white px-4 py-3 text-black focus:outline-2 focus:outline-offset-2 focus:outline-pink-500"
+        className="font-paper-crease w-full rounded-lg border-2 border-black bg-white px-4 py-3 text-black focus:outline-2 focus:outline-offset-2 focus:outline-pink-500"
         aria-label={title}
         aria-invalid={!!errors[id]}
         aria-describedby={errors[id] ? `${id}-error` : undefined}

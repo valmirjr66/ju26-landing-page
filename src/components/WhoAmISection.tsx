@@ -73,7 +73,7 @@ export default function WhoAmISection() {
           >
             <h3 className="mb-6 text-center text-black">MAIS QUE O VULGO</h3>
 
-            <p className="font-retropix mb-8 text-justify leading-relaxed text-black">
+            <p className="mb-8 text-justify leading-relaxed text-black">
               Eu sou a Ju. Estou há 9 anos na luta coletiva, batalhando por
               justiça social e climática.
               <br />
@@ -120,10 +120,10 @@ export default function WhoAmISection() {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-arcade">MEUS CORRES</DialogTitle>
+            <DialogTitle>MEUS CORRES</DialogTitle>
           </DialogHeader>
           <div
-            className="font-retropix overflow-y-auto py-4 text-black"
+            className="overflow-y-auto py-4 text-black"
             style={{ maxHeight: 400 }}
           >
             <TimelineItem

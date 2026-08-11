@@ -16,7 +16,7 @@ export default function CheckboxInput({
         onChange={onChange}
         className="h-5 w-5 shrink-0 accent-pink-500"
       />
-      <span className="font-retropix text-black">{label}</span>
+      <span className="text-black">{label}</span>
     </label>
   );
 }
