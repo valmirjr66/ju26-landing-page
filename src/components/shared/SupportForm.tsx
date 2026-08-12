@@ -216,7 +216,7 @@ export default function SupportForm() {
           filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4))",
         }}
       />
-      <p className="font-paper-crease text-black text-xl">
+      <p className="font-paper-crease text-xl text-black">
         Obrigada pelo seu apoio! Entraremos em contato em breve.
       </p>
     </div>
@@ -310,7 +310,7 @@ export default function SupportForm() {
               name="artFile"
               accept=".png,.jpg,.jpeg,.webp,.mp4,.mov,.webm"
               onChange={handleChange}
-              className="file:block w-full text-sm text-black file:mr-4 file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
+              className="w-full text-sm text-black file:mr-4 file:block file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
             />
 
             <p className="text-xs text-gray-600">
@@ -329,15 +329,15 @@ export default function SupportForm() {
         />
 
         <div className="border-t-1 border-b-1 border-yellow-500 p-2">
-          <span className="text-justify text-xs text-black leading-tight">
+          <span className="text-justify text-xs leading-tight text-black">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da campanha de Júlia Soares, conforme o{" "}
             <a href={TERM_URL} className="text-blue-800 underline">
               Termo de Consentimento
             </a>
             . Seus dados serão protegidos e utilizados exclusivamente para
-            comunicações relacionadas à campanha, sem compartilhamento
-            indevido com terceiros.
+            comunicações relacionadas à campanha, sem compartilhamento indevido
+            com terceiros.
           </span>
         </div>
       </div>
