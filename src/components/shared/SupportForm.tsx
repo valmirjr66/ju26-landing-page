@@ -12,6 +12,39 @@ const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
 const TERM_URL = import.meta.env.VITE_TERM_URL;
 const ENABLE_ART_UPLOAD = import.meta.env.VITE_ENABLE_ART_UPLOAD === "true";
 
+const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
+const MAX_AUDIO_BYTES = 15 * 1024 * 1024;
+const MAX_VIDEO_BYTES = 25 * 1024 * 1024;
+
+const bytesToMb = (bytes: number) => Math.round(bytes / (1024 * 1024));
+
+const MIME_LIMITS: Record<string, number> = {
+  "image/png": MAX_IMAGE_BYTES,
+  "image/jpeg": MAX_IMAGE_BYTES,
+  "image/webp": MAX_IMAGE_BYTES,
+  "video/mp4": MAX_VIDEO_BYTES,
+  "video/webm": MAX_VIDEO_BYTES,
+  "audio/mpeg": MAX_AUDIO_BYTES,
+  "audio/mp3": MAX_AUDIO_BYTES,
+  "audio/wav": MAX_AUDIO_BYTES,
+  "audio/wave": MAX_AUDIO_BYTES,
+  "audio/x-wav": MAX_AUDIO_BYTES,
+};
+
+const ALLOWED_EXTENSIONS = [
+  "png",
+  "jpeg",
+  "webp",
+  "mp4",
+  "webm",
+  "mp3",
+  "wav",
+] as const;
+
+const FILE_ACCEPT = ALLOWED_EXTENSIONS.flatMap(ext =>
+  ext === "jpeg" ? [".jpg", ".jpeg"] : [`.${ext}`]
+).join(",");
+
 export default function SupportForm() {
   const phoneNumberInputRef = useMask({
     mask: "(__) _____-____",
@@ -33,17 +66,6 @@ export default function SupportForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [artFile, setArtFile] = useState<File | null>(null);
-
-  const ALLOWED_FILE_TYPES = [
-    "image/png",
-    "image/jpeg",
-    "image/webp",
-    "video/mp4",
-    "video/webm",
-  ];
-
-  const MAX_IMAGE_SIZE_BYTES = 10 * 1024 * 1024; // 10 MB
-  const MAX_VIDEO_SIZE_BYTES = 25 * 1024 * 1024; // 25 MB
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -95,22 +117,26 @@ export default function SupportForm() {
     if (type === "file") {
       const file = files?.[0] ?? null;
 
-      if (file && !ALLOWED_FILE_TYPES.includes(file.type)) {
+      if (file && !(file.type in MIME_LIMITS)) {
         toast.error("Formato de arquivo não suportado.");
         e.target.value = "";
         return;
       }
 
       if (file) {
-        const isVideo = file.type.startsWith("video/");
-        const maxSize = isVideo ? MAX_VIDEO_SIZE_BYTES : MAX_IMAGE_SIZE_BYTES;
+        const maxSize = MIME_LIMITS[file.type];
 
         if (file.size > maxSize) {
-          toast.error(
-            isVideo
-              ? "O vídeo deve ter no máximo 25 MB."
-              : "A imagem deve ter no máximo 10 MB."
-          );
+          const maxMb = bytesToMb(maxSize);
+          let kind = "A imagem";
+
+          if (file.type.startsWith("video/")) {
+            kind = "O vídeo";
+          } else if (file.type.startsWith("audio/")) {
+            kind = "O áudio";
+          }
+
+          toast.error(`${kind} deve ter no máximo ${maxMb} MB.`);
           e.target.value = "";
           return;
         }
@@ -300,7 +326,7 @@ export default function SupportForm() {
         {ENABLE_ART_UPLOAD && formData.check_supportArt && (
           <div className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4">
             <p className="text-xs text-black">
-              Você pode enviar uma obra (imagem ou vídeo) agora ou, se preferir,
+              Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se preferir,
               finalizar o cadastro e nos enviar depois. Entraremos em contato
               para combinar os detalhes.
             </p>
@@ -308,15 +334,16 @@ export default function SupportForm() {
             <input
               type="file"
               name="artFile"
-              accept=".png,.jpg,.jpeg,.webp,.mp4,.mov,.webm"
+              accept={FILE_ACCEPT}
               onChange={handleChange}
               className="w-full text-sm text-black file:mr-4 file:block file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
             />
 
             <p className="text-xs text-gray-600">
-              Formatos aceitos:{" "}
-              {ALLOWED_FILE_TYPES.map(type => type.split("/")[1]).join(", ")}.
-              Limite: 10 MB para imagens e 25 MB para vídeos.
+              Formatos aceitos: {ALLOWED_EXTENSIONS.join(", ")}. Limite:{" "}
+              {bytesToMb(MAX_IMAGE_BYTES)} MB para imagens,{" "}
+              {bytesToMb(MAX_AUDIO_BYTES)} MB para áudios e{" "}
+              {bytesToMb(MAX_VIDEO_BYTES)} MB para vídeos.
             </p>
           </div>
         )}
@@ -332,7 +359,7 @@ export default function SupportForm() {
           <span className="text-justify text-xs leading-tight text-black">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da campanha de Júlia Soares, conforme o{" "}
-            <a href={TERM_URL} className="text-blue-800 underline">
+            <a href={TERM_URL} target="_blank" className="text-blue-800 underline">
               Termo de Consentimento
             </a>
             . Seus dados serão protegidos e utilizados exclusivamente para
