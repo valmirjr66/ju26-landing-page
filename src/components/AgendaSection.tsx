@@ -3,7 +3,7 @@ import environmentBackground from "@/assets/background_media/agenda_environment.
 import healthBackground from "@/assets/background_media/agenda_health.jpg";
 import womenBackground from "@/assets/background_media/agenda_women.jpg";
 import youthBackground from "@/assets/background_media/agenda_youth.jpg";
-import backgroundImage from "@/assets/background_media/vaporwave_landscape.jpg";
+import backgroundImage from "@/assets/background_media/texture_nature_purple.svg";
 import cultureIcon from "@/assets/icons/culture.png";
 import environmentIcon from "@/assets/icons/environment.png";
 import healthIcon from "@/assets/icons/health.png";
@@ -102,6 +102,7 @@ export default function AgendaSection() {
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "#cc037f",
         }}
       >
         <div className="container mx-auto px-4">
