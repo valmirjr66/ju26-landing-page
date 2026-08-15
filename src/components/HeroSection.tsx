@@ -1,4 +1,5 @@
 import textureNature from "@/assets/background_media/texture_nature_yellow.svg";
+import texturePaper from "@/assets/background_media/texture_paper_cropped.png";
 import horizontalLogo from "@/assets/icons/horizontal_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
@@ -63,8 +64,18 @@ export default function HeroSection() {
         >
           Candidata a Deputada Federal
         </h2>
-        <div className="font-brush-up mb-1 md:mb-2">Arte, Audácia e Afeto</div>
-        <div className="mb-1 flex">
+        <div className="font-brush-up mb-1 text-white md:mb-2">
+          Arte, Audácia e Afeto
+        </div>
+        <div
+          className="mb-1 flex items-center px-4 py-2"
+          style={{
+            backgroundImage: `url(${texturePaper})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
           <InstagramIcon />
           <a
             href="https://chat.whatsapp.com/FkJKTafjgb67w1chNIN8wE?s=sw&p=i&mlu=4&amv=1"
