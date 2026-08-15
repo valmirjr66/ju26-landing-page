@@ -14,6 +14,7 @@ export interface FormData {
 export interface InputErrorMessageProps {
   errors: Record<string, string>;
   fieldName: string;
+  dataTestId?: string;
 }
 
 export interface FormInputProps {
@@ -24,6 +25,7 @@ export interface FormInputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   errors: Record<string, string>;
   ref?: RefObject<HTMLInputElement>;
+  dataTestId?: string;
 }
 
 export interface CheckboxInputProps {
@@ -31,4 +33,5 @@ export interface CheckboxInputProps {
   label: string;
   checked: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  dataTestId?: string;
 }

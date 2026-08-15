@@ -6,10 +6,15 @@ import {
 export function InputErrorMessage({
   errors,
   fieldName,
+  dataTestId,
 }: InputErrorMessageProps) {
   return (
     errors[fieldName] && (
-      <p id={`${fieldName}-error`} className="mt-1 text-sm text-red-600">
+      <p
+        id={`${fieldName}-error`}
+        className="mt-1 text-sm text-red-600"
+        data-testid={dataTestId}
+      >
         {errors[fieldName]}
       </p>
     )
@@ -24,6 +29,7 @@ export default function FormInput({
   onChange,
   errors,
   ref,
+  dataTestId,
 }: FormInputProps) {
   return (
     <>
@@ -41,6 +47,7 @@ export default function FormInput({
         aria-label={title}
         aria-invalid={!!errors[id]}
         aria-describedby={errors[id] ? `${id}-error` : undefined}
+        data-testid={dataTestId}
         ref={ref}
       />
     </>

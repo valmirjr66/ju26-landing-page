@@ -5,6 +5,7 @@ export default function CheckboxInput({
   label,
   checked,
   onChange,
+  dataTestId,
 }: CheckboxInputProps) {
   return (
     <label className="flex cursor-pointer items-start gap-3">
@@ -15,6 +16,7 @@ export default function CheckboxInput({
         checked={checked}
         onChange={onChange}
         className="h-5 w-5 shrink-0 accent-pink-500"
+        data-testid={dataTestId}
       />
       <span className="text-black">{label}</span>
     </label>

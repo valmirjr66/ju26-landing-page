@@ -234,7 +234,7 @@ export default function SupportForm() {
   };
 
   return isSubmitted ? (
-    <div className="py-8 text-center">
+    <div className="py-8 text-center" data-testid="support-form-success">
       <DotLottieReact
         src="/ok.lottie"
         autoplay
@@ -247,7 +247,11 @@ export default function SupportForm() {
       </p>
     </div>
   ) : (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4"
+      data-testid="support-form"
+    >
       <div>
         <FormInput
           id="name"
@@ -256,8 +260,13 @@ export default function SupportForm() {
           value={formData.name}
           onChange={handleChange}
           errors={errors}
+          dataTestId="support-form-name"
         />
-        <InputErrorMessage errors={errors} fieldName="name" />
+        <InputErrorMessage
+          errors={errors}
+          fieldName="name"
+          dataTestId="support-form-name-error"
+        />
       </div>
 
       <div>
@@ -268,8 +277,13 @@ export default function SupportForm() {
           value={formData.email}
           onChange={handleChange}
           errors={errors}
+          dataTestId="support-form-email"
         />
-        <InputErrorMessage errors={errors} fieldName="email" />
+        <InputErrorMessage
+          errors={errors}
+          fieldName="email"
+          dataTestId="support-form-email-error"
+        />
       </div>
 
       <div>
@@ -281,11 +295,19 @@ export default function SupportForm() {
           onChange={handleChange}
           errors={errors}
           ref={phoneNumberInputRef}
+          dataTestId="support-form-whatsapp"
         />
-        <InputErrorMessage errors={errors} fieldName="whatsapp" />
+        <InputErrorMessage
+          errors={errors}
+          fieldName="whatsapp"
+          dataTestId="support-form-whatsapp-error"
+        />
       </div>
 
-      <p className="text-center text-xs text-gray-600">
+      <p
+        className="text-center text-xs text-gray-600"
+        data-testid="support-form-contact-hint"
+      >
         Informe pelo menos um meio de contato: e-mail ou WhatsApp.
       </p>
 
@@ -297,8 +319,13 @@ export default function SupportForm() {
           value={formData.city}
           onChange={handleChange}
           errors={errors}
+          dataTestId="support-form-city"
         />
-        <InputErrorMessage errors={errors} fieldName="city" />
+        <InputErrorMessage
+          errors={errors}
+          fieldName="city"
+          dataTestId="support-form-city-error"
+        />
       </div>
 
       <div className="space-y-3 pt-2">
@@ -307,6 +334,7 @@ export default function SupportForm() {
           checked={formData.check_supportSocialMedia}
           onChange={handleChange}
           label="Quero apoiar nas redes"
+          dataTestId="support-form-check-support-social-media"
         />
 
         <CheckboxInput
@@ -314,6 +342,7 @@ export default function SupportForm() {
           checked={formData.check_supportStreets}
           onChange={handleChange}
           label="Quero apoiar nas ruas"
+          dataTestId="support-form-check-support-streets"
         />
 
         <CheckboxInput
@@ -321,10 +350,14 @@ export default function SupportForm() {
           checked={formData.check_supportArt}
           onChange={handleChange}
           label="Quero contribuir com a minha arte"
+          dataTestId="support-form-check-support-art"
         />
 
         {ENABLE_ART_UPLOAD && formData.check_supportArt && (
-          <div className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4">
+          <div
+            className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4"
+            data-testid="support-form-art-upload"
+          >
             <p className="text-xs text-black">
               Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se preferir,
               finalizar o cadastro e nos enviar depois. Entraremos em contato
@@ -337,6 +370,7 @@ export default function SupportForm() {
               accept={FILE_ACCEPT}
               onChange={handleChange}
               className="w-full text-sm text-black file:mr-4 file:block file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
+              data-testid="support-form-art-file"
             />
 
             <p className="text-xs text-gray-600">
@@ -353,13 +387,22 @@ export default function SupportForm() {
           checked={formData.check_receiveMaterial}
           onChange={handleChange}
           label="Gostaria de receber material de campanha"
+          dataTestId="support-form-check-receive-material"
         />
 
-        <div className="border-t-1 border-b-1 border-yellow-500 p-2">
+        <div
+          className="border-t-1 border-b-1 border-yellow-500 p-2"
+          data-testid="support-form-terms"
+        >
           <span className="text-justify text-xs leading-tight text-black">
             Ao enviar as informações, você autoriza o uso dos seus dados para
             comunicação da campanha de Júlia Soares, conforme o{" "}
-            <a href={TERM_URL} target="_blank" className="text-blue-800 underline">
+            <a
+              href={TERM_URL}
+              target="_blank"
+              className="text-blue-800 underline"
+              data-testid="support-form-terms-link"
+            >
               Termo de Consentimento
             </a>
             . Seus dados serão protegidos e utilizados exclusivamente para
@@ -380,6 +423,7 @@ export default function SupportForm() {
           }
           className="vaporwave-button disabled:cursor-not-allowed disabled:opacity-50"
           aria-label="Enviar formulário de apoio"
+          data-testid="support-form-submit"
         >
           {isLoading ? "ENVIANDO..." : "ENVIAR"}
         </button>
