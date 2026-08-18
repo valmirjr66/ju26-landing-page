@@ -123,7 +123,7 @@ export default function AgendaSection() {
               <button
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
-                className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
+                className="@container group relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
                 style={{
                   backgroundColor: item.bgColor,
                   color: "#FFFFFF",
@@ -131,14 +131,14 @@ export default function AgendaSection() {
                 }}
                 aria-label={`${item.title} - clique para mais informações`}
               >
-                <div className="flex min-h-54 flex-col items-center justify-center p-2 md:min-h-56">
+                <div className="flex h-full flex-col items-center justify-center gap-[5%] px-[6%] py-[10%]">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="mb-4 h-20 w-20 object-contain"
+                    className="h-[48%] w-[48%] object-contain"
                   />
 
-                  <h4 className="text-center text-lg font-bold md:text-base">
+                  <h4 className="max-w-full text-center text-[length:12cqw] leading-none font-bold tracking-widest whitespace-nowrap">
                     {item.title}
                   </h4>
                 </div>
