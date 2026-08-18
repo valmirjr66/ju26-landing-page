@@ -216,6 +216,20 @@
     }
   }
 
+  @keyframes art-instrument-sway {
+    from {
+      rotate: 0deg;
+    }
+    to {
+      rotate: 20deg;
+    }
+  }
+
+  .art-instrument-sway {
+    animation: art-instrument-sway 2s ease-in-out infinite alternate;
+    transform-origin: center center;
+  }
+
   @keyframes header-background-pan {
     0% {
       background-position: calc(50% - 5px) center;
