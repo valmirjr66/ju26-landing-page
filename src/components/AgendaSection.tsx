@@ -3,7 +3,7 @@ import environmentBackground from "@/assets/background_media/agenda_environment.
 import healthBackground from "@/assets/background_media/agenda_health.jpg";
 import womenBackground from "@/assets/background_media/agenda_women.jpg";
 import youthBackground from "@/assets/background_media/agenda_youth.jpg";
-import backgroundImage from "@/assets/background_media/texture_nature_purple.svg";
+import backgroundImage from "@/assets/background_media/texture_grunge.png";
 import cultureIcon from "@/assets/icons/culture.png";
 import environmentIcon from "@/assets/icons/environment.png";
 import healthIcon from "@/assets/icons/health.png";
@@ -24,7 +24,6 @@ interface AgendaItem {
   icon: string;
   background: string;
   bgColor: string;
-  contrastColor: string;
   content: string;
 }
 
@@ -34,8 +33,7 @@ const agendaItems: AgendaItem[] = [
     title: "AMBIENTE",
     icon: environmentIcon,
     background: environmentBackground,
-    bgColor: "#2A2A2A",
-    contrastColor: "#FFFFFF",
+    bgColor: "#32776B",
     content:
       "Defender o meio ambiente é defender a vida. É defender quem perde a casa na enchente, quem sofre com o calor extremo, quem fica sem água, quem vive ao lado da mineração predatória e quem sempre paga a conta da destruição. Em Minas Gerais, conhecemos de perto o preço de colocar o lucro acima das pessoas. Mariana e Brumadinho não foram acidentes: foram consequências de escolhas políticas. Vamos enfrentar a crise climática com coragem, fortalecer a fiscalização ambiental, proteger nossos rios, serras e nascentes e investir em cidades mais verdes e preparadas para os desafios do futuro. Justiça ambiental também é justiça social. Não existe futuro possível sem enfrentar quem transforma a natureza em mercadoria.",
   },
@@ -44,8 +42,7 @@ const agendaItems: AgendaItem[] = [
     title: "CULTURA",
     icon: cultureIcon,
     background: cultureBackground,
-    bgColor: "#2A2A2A",
-    contrastColor: "#FFFFFF",
+    bgColor: "#4D2A64",
     content:
       "A cultura não é um privilégio, é um direito. Uma ferramenta de transformação e uma das maiores riquezas do nosso povo. Foi através da cultura que milhares de jovens encontraram voz, pertencimento e oportunidade. O Hip Hop nos ensinou que arte também é educação, organização, consciência e resistência. Defender a cultura é defender quem vive dela: artistas, produtores, coletivos, técnicos e trabalhadores que movimentam a economia criativa todos os dias. Buscamos mais investimento permanente, ocupação dos espaços públicos, fortalecimento dos coletivos e valorização de quem faz cultura nas periferias e no interior. Porque um povo que produz cultura também produz liberdade.",
   },
@@ -54,8 +51,7 @@ const agendaItems: AgendaItem[] = [
     title: "SAÚDE",
     icon: healthIcon,
     background: healthBackground,
-    bgColor: "#2A2A2A",
-    contrastColor: "#FFFFFF",
+    bgColor: "#4A2583",
     content:
       "Saúde não começa no hospital ou consultório. A saúde começa quando existe comida no prato, moradia digna, trabalho digno com direitos, cultura, lazer, transporte e um meio ambiente saudável. Vejo todos os dias que adoecer não é apenas uma questão individual: é consequência das desigualdades que atravessam a vida do nosso povo. Defender o SUS é defender uma das maiores conquistas da democracia brasileira. Vamos lutar para fortalecer a atenção básica, ampliar o acesso à saúde mental, garantir atendimento digno às mulheres e enfrentar as causas do adoecimento da nossa geração. Cuidar da saúde é cuidar das pessoas antes que elas precisem adoecer.",
   },
@@ -64,8 +60,7 @@ const agendaItems: AgendaItem[] = [
     title: "MULHERES",
     icon: womenIcon,
     background: womenBackground,
-    bgColor: "#FFFFFF",
-    contrastColor: "#F51357",
+    bgColor: "#243A3B",
     content:
       "A democracia não existe enquanto as mulheres continuam ganhando menos, trabalhando mais e vivendo sob a ameaça da violência. Defender as mulheres é defender autonomia, dignidade e justiça. É garantir acesso à saúde, combate à violência de gênero, igualdade de oportunidades e participação nos espaços de decisão. Como médica, sei que muitas desigualdades começam antes mesmo de sair de casa. Como mulher, sei que nossos direitos nunca foram presentes, sempre foram conquistas. Vamos enfrentar o machismo estrutural e construir um país onde nenhuma mulher tenha medo de existir, ocupar espaços ou sonhar. A luta feminista é uma luta por uma sociedade mais justa para todas as pessoas.",
   },
@@ -74,8 +69,7 @@ const agendaItems: AgendaItem[] = [
     title: "JUVENTUDES",
     icon: youthIcon,
     background: youthBackground,
-    bgColor: "#FFFFFF",
-    contrastColor: "#F51357",
+    bgColor: "#CC037F",
     content:
       "A juventude não é o futuro, é o presente. E já passou da hora de ocupar os espaços de decisão. Somos a geração que enfrenta a crise climática, a precarização do trabalho, o adoecimento mental e a falta de oportunidades, mas também somos a geração que produz cultura, organiza movimentos, cria soluções e transforma territórios. A política precisa deixar de falar sobre os jovens e começar a construir com os jovens. Queremos educação, cultura, trabalho digno, ciência, esporte, participação popular e direito de sonhar sem precisar abandonar nossas raízes. Quando a juventude ocupa a política, o futuro deixa de ser promessa e começa a ser construção coletiva.",
   },
@@ -101,12 +95,14 @@ export default function AgendaSection() {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundColor: "#cc037f",
+          backgroundColor: "#f1c325",
         }}
       >
         <div className="container mx-auto px-4">
-          <h3 className="mb-12 text-center text-white drop-shadow-lg">
+          <h3
+            className="mb-12 text-center text-black"
+            style={{ textShadow: "2px 2px 0px rgba(255, 255, 255, 0.7)" }}
+          >
             <TypeAnimation
               sequence={[
                 "NOSSO PAPO",
@@ -130,8 +126,8 @@ export default function AgendaSection() {
                 className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
                 style={{
                   backgroundColor: item.bgColor,
-                  color: item.contrastColor,
-                  borderColor: item.contrastColor,
+                  color: "#FFFFFF",
+                  borderColor: "#FFFFFF",
                 }}
                 aria-label={`${item.title} - clique para mais informações`}
               >
