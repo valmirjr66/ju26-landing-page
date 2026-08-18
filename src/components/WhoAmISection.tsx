@@ -1,3 +1,4 @@
+import backgroundImage from "@/assets/background_media/textura_leaves.svg";
 import timelinePhoto1 from "@/assets/photos/timeline_1.jpg";
 import timelinePhoto2 from "@/assets/photos/timeline_2.jpg";
 import timelinePhoto3 from "@/assets/photos/timeline_3.jpg";
@@ -48,12 +49,17 @@ export default function WhoAmISection() {
         id="who-am-i"
         className="relative w-full overflow-hidden py-20 md:py-32"
         aria-label="Seção Quem Sou Eu"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundColor: "#32776b",
+        }}
       >
         <div className="container mx-auto max-w-2xl px-4">
           <div
             style={{
               backgroundColor: "var(--primary)",
-              opacity: 0.9,
+              opacity: 0.95,
               borderRadius: "1.5rem",
               padding: "2rem",
             }}
