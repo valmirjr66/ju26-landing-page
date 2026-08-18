@@ -22,7 +22,13 @@ import InstagramIcon from "./shared/InstagramIcon";
 const PORTRAITS = [juPortrait1, juPortrait2] as const;
 const SWAP_INTERVAL_MS = 3000;
 
-const ART_INSTRUMENTS = [
+type ArtInstrument = {
+  src: string;
+  className: string;
+  inFront?: boolean;
+};
+
+const ART_INSTRUMENTS: ArtInstrument[] = [
   {
     src: artInstrument1,
     className:
@@ -35,11 +41,13 @@ const ART_INSTRUMENTS = [
   },
   {
     src: artInstrument3,
+    inFront: true,
     className:
       "-left-[14%] top-[30%] w-[22vw] rotate-[32deg] md:left-[6%] md:top-[28%] md:w-[12vw] lg:left-[8%] lg:w-[10vw]",
   },
   {
     src: artInstrument4,
+    inFront: true,
     className:
       "-right-[10%] top-[28%] w-[20vw] -rotate-[12deg] md:right-[6%] md:top-[26%] md:w-[12vw] lg:right-[8%] lg:w-[10vw]",
   },
@@ -65,11 +73,13 @@ const ART_INSTRUMENTS = [
   },
   {
     src: artInstrument9,
+    inFront: true,
     className:
       "-right-[8%] top-[50%] w-[22vw] -rotate-[18deg] md:right-[8%] md:top-[46%] md:w-[13vw] lg:right-[10%] lg:w-[11vw]",
   },
   {
     src: artInstrument10,
+    inFront: true,
     className:
       "left-[4%] bottom-[-6%] w-[26vw] -rotate-[6deg] md:left-[14%] md:bottom-[2%] md:w-[15vw] lg:left-[16%] lg:w-[13vw]",
   },
@@ -80,6 +90,7 @@ const ART_INSTRUMENTS = [
   },
   {
     src: artInstrument12,
+    inFront: true,
     className:
       "right-[6%] bottom-[-4%] w-[24vw] rotate-[6deg] md:right-[14%] md:bottom-[2%] md:w-[14vw] lg:right-[16%] lg:w-[12vw]",
   },
@@ -88,7 +99,42 @@ const ART_INSTRUMENTS = [
     className:
       "left-[6%] top-[62%] w-[20vw] -rotate-[28deg] md:left-[12%] md:top-[58%] md:w-[11vw] lg:left-[14%] lg:w-[10vw]",
   },
-] as const;
+];
+
+function ArtInstrumentLayer({
+  inFront,
+  className,
+}: {
+  inFront: boolean;
+  className: string;
+}) {
+  return (
+    <div className={className} aria-hidden="true">
+      <div className="relative mx-auto h-full w-full max-w-[44rem] lg:max-w-[50rem] xl:max-w-[54rem] 2xl:max-w-[58rem]">
+        {ART_INSTRUMENTS.filter(
+          instrument => Boolean(instrument.inFront) === inFront
+        ).map(({ src, className: instrumentClassName }, index) => (
+          <div
+            key={src}
+            className={`absolute max-w-[8.5rem] md:max-w-[14rem] ${instrumentClassName}`}
+          >
+            <img
+              src={src}
+              alt=""
+              draggable={false}
+              className="art-instrument-sway h-auto w-full object-contain select-none"
+              style={{
+                animationDelay: `${-index * 0.23}s`,
+                animationDirection:
+                  index % 2 === 0 ? "alternate" : "alternate-reverse",
+              }}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -113,31 +159,10 @@ export default function HeroSection() {
         backgroundColor: "#ef7a1e",
       }}
     >
-      <div
+      <ArtInstrumentLayer
+        inFront={false}
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
-        aria-hidden="true"
-      >
-        <div className="relative mx-auto h-full w-full max-w-[44rem] lg:max-w-[50rem] xl:max-w-[54rem] 2xl:max-w-[58rem]">
-          {ART_INSTRUMENTS.map(({ src, className }, index) => (
-            <div
-              key={src}
-              className={`absolute max-w-[8.5rem] md:max-w-[14rem] ${className}`}
-            >
-              <img
-                src={src}
-                alt=""
-                draggable={false}
-                className="art-instrument-sway h-auto w-full object-contain select-none"
-                style={{
-                  animationDelay: `${-index * 0.23}s`,
-                  animationDirection:
-                    index % 2 === 0 ? "alternate" : "alternate-reverse",
-                }}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      />
 
       {PORTRAITS.map((src, index) => (
         <img
@@ -152,6 +177,11 @@ export default function HeroSection() {
           }}
         />
       ))}
+
+      <ArtInstrumentLayer
+        inFront
+        className="pointer-events-none absolute inset-0 z-[2] overflow-hidden"
+      />
 
       <div
         id="header-collection"
