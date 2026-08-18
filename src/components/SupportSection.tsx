@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/texture_paper.jpg";
+import backgroundImage from "@/assets/background_media/texture_nature_purple.svg";
 import SupportForm from "./shared/SupportForm";
 
 export default function SupportSection() {
@@ -11,10 +11,11 @@ export default function SupportSection() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundColor: "#cc037f",
       }}
     >
       <div className="container mx-auto max-w-xl px-4 md:max-w-2xl">
-        <h2 className="mb-12 text-center text-black">COLA COM A GENTE!</h2>
+        <h2 className="mb-12 text-center text-white">COLA COM A GENTE!</h2>
 
         <div
           style={{
