@@ -123,7 +123,7 @@ export default function AgendaSection() {
               <button
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
-                className="@container group relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
+                className="group @container relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
                 style={{
                   backgroundColor: item.bgColor,
                   color: "#FFFFFF",

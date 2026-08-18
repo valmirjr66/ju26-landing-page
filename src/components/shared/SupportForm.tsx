@@ -359,9 +359,9 @@ export default function SupportForm() {
             data-testid="support-form-art-upload"
           >
             <p className="text-xs text-black">
-              Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se preferir,
-              finalizar o cadastro e nos enviar depois. Entraremos em contato
-              para combinar os detalhes.
+              Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se
+              preferir, finalizar o cadastro e nos enviar depois. Entraremos em
+              contato para combinar os detalhes.
             </p>
 
             <input
