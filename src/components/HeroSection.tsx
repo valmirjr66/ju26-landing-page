@@ -51,22 +51,21 @@ export default function HeroSection() {
         id="header-collection"
         className="absolute bottom-8 z-10 flex w-full flex-col items-center justify-center px-4 text-center md:bottom-12"
       >
-        <h1 className="mb-2 md:mb-3">
+        <h1 className="m-0 w-full max-w-full text-[0] leading-none">
           <img
             src={horizontalLogo}
             alt="JU 5037"
-            className="mx-auto h-auto w-[min(90vw,28rem)] drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)]"
+            width={1080}
+            height={426}
+            className="mx-auto h-auto w-auto max-h-[min(17.6svh,8rem)] max-w-[80%] object-contain drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)] sm:max-h-[min(20.8svh,9.6rem)] md:max-h-[min(24svh,12.8rem)] md:max-w-[44.8rem] lg:max-h-[min(25.6svh,14.4rem)] lg:max-w-[51.2rem]"
           />
         </h1>
-        <h2
+        <h3
           className="mb-2 font-normal text-white md:mb-3"
           style={{ textShadow: "5px 5px 3px rgba(0, 0, 0, 0.8)" }}
         >
           Candidata a Deputada Federal
-        </h2>
-        <div className="font-brush-up mb-1 text-white md:mb-2">
-          Arte, Audácia e Afeto
-        </div>
+        </h3>
         <div
           className="mb-1 flex items-center px-4 py-2"
           style={{
