@@ -19,7 +19,7 @@ export default function SupportSection() {
 
         <div
           style={{
-            backgroundColor: "var(--primary)",
+            backgroundColor: "#f1c325",
             borderRadius: "1.5rem",
             padding: "2rem",
           }}

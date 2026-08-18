@@ -9,51 +9,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
 }
 
 :root {
-  /* Vaporwave Color Palette */
-  --primary: #fbe006; /* Amarelo vibrante */
-  --primary-foreground: #000000; /* Preto para contraste */
-  --secondary: #f51357; /* Rosa quente */
-  --secondary-foreground: #ffffff; /* Branco */
-  --accent: #97efd5; /* Turquesa */
-  --accent-foreground: #000000; /* Preto */
-  --destructive: #f51357; /* Rosa para ações destrutivas */
-  --destructive-foreground: #ffffff;
-
-  /* Semantic Colors */
   --radius: 1rem;
-  --background: #ffffff; /* Fundo branco */
-  --foreground: #000000; /* Texto preto */
-  --card: #ffffff;
-  --card-foreground: #000000;
-  --popover: #ffffff;
-  --popover-foreground: #000000;
-  --muted: #f5f5f5;
-  --muted-foreground: #666666;
-  --border: #e0e0e0;
-  --input: #f5f5f5;
-  --ring: #fbe006;
 
   /*
    * Fluid type scale (Utopia-style): clamp(min, rem + vw, max)
@@ -71,11 +30,11 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-[#e0e0e0] outline-[#fbe006]/50;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-black;
   }
 
   button:not(:disabled),

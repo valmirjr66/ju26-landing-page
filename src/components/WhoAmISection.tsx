@@ -58,7 +58,7 @@ export default function WhoAmISection() {
         <div className="container mx-auto max-w-2xl px-4">
           <div
             style={{
-              backgroundColor: "var(--primary)",
+              backgroundColor: "#f1c325",
               opacity: 0.95,
               borderRadius: "1.5rem",
               padding: "2rem",
