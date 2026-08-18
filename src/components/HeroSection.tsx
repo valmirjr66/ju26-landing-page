@@ -1,5 +1,4 @@
 import textureNature from "@/assets/background_media/texture_nature_yellow.svg";
-import texturePaper from "@/assets/background_media/texture_paper_cropped.png";
 import horizontalLogo from "@/assets/icons/horizontal_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
@@ -51,13 +50,13 @@ export default function HeroSection() {
         id="header-collection"
         className="absolute bottom-8 z-10 flex w-full flex-col items-center justify-center px-4 text-center md:bottom-12"
       >
-        <h1 className="m-0 w-full max-w-full text-[0] leading-none">
+        <h1 className="m-0 w-full max-w-full leading-none text-[0]">
           <img
             src={horizontalLogo}
             alt="JU 5037"
             width={1080}
             height={426}
-            className="mx-auto h-auto w-auto max-h-[min(17.6svh,8rem)] max-w-[80%] object-contain drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)] sm:max-h-[min(20.8svh,9.6rem)] md:max-h-[min(24svh,12.8rem)] md:max-w-[44.8rem] lg:max-h-[min(25.6svh,14.4rem)] lg:max-w-[51.2rem]"
+            className="mx-auto h-auto max-h-[min(17.6svh,8rem)] w-auto max-w-[80%] object-contain drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)] sm:max-h-[min(20.8svh,9.6rem)] md:max-h-[min(24svh,12.8rem)] md:max-w-[44.8rem] lg:max-h-[min(25.6svh,14.4rem)] lg:max-w-[51.2rem]"
           />
         </h1>
         <h3
@@ -66,15 +65,7 @@ export default function HeroSection() {
         >
           Candidata a Deputada Federal
         </h3>
-        <div
-          className="mb-1 flex items-center px-4 py-2"
-          style={{
-            backgroundImage: `url(${texturePaper})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="mb-1 flex items-center px-4 py-2">
           <InstagramIcon />
           <a
             href="https://chat.whatsapp.com/FkJKTafjgb67w1chNIN8wE?s=sw&p=i&mlu=4&amv=1"
