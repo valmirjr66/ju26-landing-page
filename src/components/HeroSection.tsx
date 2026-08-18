@@ -196,10 +196,7 @@ export default function HeroSection() {
             className="mx-auto h-auto max-h-[min(17.6svh,8rem)] w-auto max-w-[80%] object-contain drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)] sm:max-h-[min(20.8svh,9.6rem)] md:max-h-[min(24svh,12.8rem)] md:max-w-[44.8rem] lg:max-h-[min(25.6svh,14.4rem)] lg:max-w-[51.2rem]"
           />
         </h1>
-        <h3
-          className="mb-2 font-normal text-white md:mb-3"
-          style={{ textShadow: "5px 5px 3px rgba(0, 0, 0, 0.8)" }}
-        >
+        <h3 className="mb-2 font-normal text-white [-webkit-text-stroke:3px_black] [paint-order:stroke_fill] md:mb-3">
           Candidata a Deputada Federal
         </h3>
         <div className="mb-1 flex items-center px-4 py-2">
