@@ -400,6 +400,7 @@ export default function SupportForm() {
             <a
               href={TERM_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-800 underline"
               data-testid="support-form-terms-link"
             >
