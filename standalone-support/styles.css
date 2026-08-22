@@ -336,7 +336,7 @@ input:focus {
   font-family: "Paper Crease", sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  color: #000000;
+  color: #fff;
 }
 
 /* Toasts, mirroring the sonner defaults used by the React app */
