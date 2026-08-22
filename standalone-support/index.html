@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>JU5037 - Pra Deputada Federal</title>
+    <meta
+      name="description"
+      content="Formulário de apoio à campanha de Júlia Soares"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section
+      id="support-form"
+      class="support-section"
+      aria-label="Seção Formulário de Apoio"
+    >
+      <div class="container">
+        <div class="support-card">
+          <h2 class="support-title">SE INSCREVA PARA FICAR POR DENTRO DOS LANÇAMENTOS</h2>
+        <h4 class="support-subtitle">Tem muita coisa por vir...</h4>
+          <form id="form" class="form" novalidate data-testid="support-form">
+            <div>
+              <label for="name" class="sr-only">Nome</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="NOME"
+                class="form-input"
+                aria-label="Nome"
+                data-testid="support-form-name"
+              />
+              <p
+                id="name-error"
+                class="input-error"
+                hidden
+                data-testid="support-form-name-error"
+              ></p>
+            </div>
+
+            <div>
+              <label for="email" class="sr-only">E-mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="E-MAIL"
+                class="form-input"
+                aria-label="E-mail"
+                data-testid="support-form-email"
+              />
+              <p
+                id="email-error"
+                class="input-error"
+                hidden
+                data-testid="support-form-email-error"
+              ></p>
+            </div>
+
+            <div>
+              <label for="whatsapp" class="sr-only">WhatsApp</label>
+              <input
+                id="whatsapp"
+                name="whatsapp"
+                type="tel"
+                placeholder="WHATSAPP"
+                class="form-input"
+                aria-label="WhatsApp"
+                data-testid="support-form-whatsapp"
+              />
+              <p
+                id="whatsapp-error"
+                class="input-error"
+                hidden
+                data-testid="support-form-whatsapp-error"
+              ></p>
+            </div>
+
+            <p class="contact-hint" data-testid="support-form-contact-hint">
+              Informe pelo menos um meio de contato: e-mail ou WhatsApp.
+            </p>
+
+            <div>
+              <label for="city" class="sr-only">Cidade</label>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                placeholder="CIDADE"
+                class="form-input"
+                aria-label="Cidade"
+                data-testid="support-form-city"
+              />
+              <p
+                id="city-error"
+                class="input-error"
+                hidden
+                data-testid="support-form-city-error"
+              ></p>
+            </div>
+
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input
+                  id="check_supportSocialMedia"
+                  name="check_supportSocialMedia"
+                  type="checkbox"
+                  class="checkbox-input"
+                  data-testid="support-form-check-support-social-media"
+                />
+                <span>Quero apoiar nas redes</span>
+              </label>
+
+              <label class="checkbox-label">
+                <input
+                  id="check_supportStreets"
+                  name="check_supportStreets"
+                  type="checkbox"
+                  class="checkbox-input"
+                  data-testid="support-form-check-support-streets"
+                />
+                <span>Quero apoiar nas ruas</span>
+              </label>
+
+              <label class="checkbox-label">
+                <input
+                  id="check_supportArt"
+                  name="check_supportArt"
+                  type="checkbox"
+                  class="checkbox-input"
+                  data-testid="support-form-check-support-art"
+                />
+                <span>Quero contribuir com a minha arte</span>
+              </label>
+
+              <div
+                id="art-upload"
+                class="art-upload"
+                hidden
+                data-testid="support-form-art-upload"
+              >
+                <p class="art-upload-intro">
+                  Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se
+                  preferir, finalizar o cadastro e nos enviar depois. Entraremos
+                  em contato para combinar os detalhes.
+                </p>
+
+                <input
+                  id="artFile"
+                  name="artFile"
+                  type="file"
+                  class="file-input"
+                  data-testid="support-form-art-file"
+                />
+
+                <p id="art-upload-hint" class="art-upload-hint"></p>
+              </div>
+
+              <label class="checkbox-label">
+                <input
+                  id="check_receiveMaterial"
+                  name="check_receiveMaterial"
+                  type="checkbox"
+                  class="checkbox-input"
+                  data-testid="support-form-check-receive-material"
+                />
+                <span>Gostaria de receber material de campanha</span>
+              </label>
+
+              <div class="terms" data-testid="support-form-terms">
+                <span class="terms-text">
+                  Ao enviar as informações, você autoriza o uso dos seus dados
+                  para comunicação da campanha de Júlia Soares, conforme o
+                  <a
+                    id="terms-link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="terms-link"
+                    data-testid="support-form-terms-link"
+                    >Termo de Consentimento</a
+                  >. Seus dados serão protegidos e utilizados exclusivamente
+                  para comunicações relacionadas à campanha, sem compartilhamento
+                  indevido com terceiros.
+                </span>
+              </div>
+            </div>
+
+            <div class="submit-row">
+              <button
+                id="submit"
+                type="submit"
+                class="vaporwave-button"
+                aria-label="Enviar formulário de apoio"
+                data-testid="support-form-submit"
+                disabled
+              >
+                ENVIAR
+              </button>
+            </div>
+          </form>
+
+          <div id="success" class="success" hidden data-testid="support-form-success">
+            <dotlottie-wc
+              id="success-animation"
+              src="assets/ok.lottie"
+              autoplay
+            ></dotlottie-wc>
+            <p class="success-text">
+              Obrigada pelo seu apoio! Entraremos em contato em breve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="toaster" class="toaster" role="region" aria-label="Notificações"></div>
+
+    <script type="module">
+      import "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@0.9.27/+esm";
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
