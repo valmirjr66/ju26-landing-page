@@ -1,8 +1,7 @@
 (function () {
   "use strict";
 
-  var API_URL =
-    "https://ju26-api-883258931528.southamerica-east1.run.app/api";
+  var API_URL = "https://ju26-api-883258931528.southamerica-east1.run.app/api";
   var API_KEY = "f4b47201-78e2-4d4c-8679-f48b1137e9a7";
   var ENVIRONMENT = "prod";
   var TERM_URL =
@@ -30,15 +29,7 @@
     "audio/x-wav": MAX_AUDIO_BYTES,
   };
 
-  var ALLOWED_EXTENSIONS = [
-    "png",
-    "jpeg",
-    "webp",
-    "mp4",
-    "webm",
-    "mp3",
-    "wav",
-  ];
+  var ALLOWED_EXTENSIONS = ["png", "jpeg", "webp", "mp4", "webm", "mp3", "wav"];
 
   var FILE_ACCEPT = ALLOWED_EXTENSIONS.reduce(function (acc, ext) {
     return acc.concat(ext === "jpeg" ? [".jpg", ".jpeg"] : ["." + ext]);

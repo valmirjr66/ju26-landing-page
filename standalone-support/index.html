@@ -11,8 +11,18 @@
       name="description"
       content="Formulário de apoio à campanha de Júlia Soares"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -24,8 +34,10 @@
     >
       <div class="container">
         <div class="support-card">
-          <h2 class="support-title">SE INSCREVA PARA FICAR POR DENTRO DOS LANÇAMENTOS</h2>
-        <h4 class="support-subtitle">Tem muita coisa por vir...</h4>
+          <h2 class="support-title">
+            SE INSCREVA PARA FICAR POR DENTRO DOS LANÇAMENTOS
+          </h2>
+          <h4 class="support-subtitle">Tem muita coisa por vir...</h4>
           <form id="form" class="form" novalidate data-testid="support-form">
             <div>
               <label for="name" class="sr-only">Nome</label>
@@ -148,9 +160,9 @@
                 data-testid="support-form-art-upload"
               >
                 <p class="art-upload-intro">
-                  Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se
-                  preferir, finalizar o cadastro e nos enviar depois. Entraremos
-                  em contato para combinar os detalhes.
+                  Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou,
+                  se preferir, finalizar o cadastro e nos enviar depois.
+                  Entraremos em contato para combinar os detalhes.
                 </p>
 
                 <input
@@ -188,8 +200,8 @@
                     data-testid="support-form-terms-link"
                     >Termo de Consentimento</a
                   >. Seus dados serão protegidos e utilizados exclusivamente
-                  para comunicações relacionadas à campanha, sem compartilhamento
-                  indevido com terceiros.
+                  para comunicações relacionadas à campanha, sem
+                  compartilhamento indevido com terceiros.
                 </span>
               </div>
             </div>
@@ -208,7 +220,12 @@
             </div>
           </form>
 
-          <div id="success" class="success" hidden data-testid="support-form-success">
+          <div
+            id="success"
+            class="success"
+            hidden
+            data-testid="support-form-success"
+          >
             <dotlottie-wc
               id="success-animation"
               src="assets/ok.lottie"
@@ -222,7 +239,12 @@
       </div>
     </section>
 
-    <div id="toaster" class="toaster" role="region" aria-label="Notificações"></div>
+    <div
+      id="toaster"
+      class="toaster"
+      role="region"
+      aria-label="Notificações"
+    ></div>
 
     <script type="module">
       import "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@0.9.27/+esm";
