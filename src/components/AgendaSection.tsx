@@ -101,7 +101,12 @@ export default function AgendaSection() {
         <div className="container mx-auto px-4">
           <h3
             className="mb-12 text-center text-black"
-            style={{ textShadow: "2px 2px 0px rgba(255, 255, 255, 0.7)" }}
+            style={{
+              textShadow: `-3px -3px 0px rgba(255, 255, 255, 0.7),
+                3px -3px 0px rgba(255, 255, 255, 0.7),
+                -3px 3px 0px rgba(255, 255, 255, 0.7),
+                3px 3px 0px rgba(255, 255, 255, 0.7)`,
+            }}
           >
             <TypeAnimation
               sequence={[
