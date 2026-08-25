@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/cloudy_sky.jpg";
+import headerBackgroundImage from "@/assets/background_media/texture_grunge.png";
 import logo from "@/assets/icons/vertical_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import { useEffect, useState } from "react";
@@ -30,8 +30,9 @@ export default function Layout() {
             : "-translate-y-full opacity-0"
         }`}
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${headerBackgroundImage})`,
           backgroundSize: "cover",
+          backgroundColor: "#e639a4",
           animation: "header-background-pan 8s ease-in-out infinite",
           pointerEvents: isVisible ? "auto" : "none",
           boxShadow: "0px 0px 20px black",
