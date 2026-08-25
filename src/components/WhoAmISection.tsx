@@ -67,7 +67,17 @@ export default function WhoAmISection() {
               padding: "2rem",
             }}
           >
-            <h3 className="mb-6 text-center text-black">MAIS QUE O VULGO</h3>
+            <h3
+              className="mb-6 text-center text-black"
+              style={{
+                textShadow: `-3px -3px 0px rgb(255, 255, 255),
+                3px -3px 0px rgb(255, 255, 255),
+                -3px 3px 0px rgb(255, 255, 255),
+                3px 3px 0px rgb(255, 255, 255)`,
+              }}
+            >
+              MAIS QUE O VULGO
+            </h3>
 
             <p className="mb-8 text-justify leading-relaxed text-black">
               Eu sou a Ju. Estou há 9 anos na luta coletiva, batalhando por
