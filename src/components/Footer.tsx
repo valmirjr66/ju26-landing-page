@@ -1,16 +1,23 @@
+import backgroundImage from "@/assets/background_media/texture_grunge.png";
 import psolIcon from "@/assets/icons/psol.svg";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="w-full py-6 md:py-8" aria-label="Rodapé">
+    <footer
+      className="w-full py-6 md:py-8"
+      aria-label="Rodapé"
+      style={{
+        backgroundColor: "#4d2a64",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div className="flex-1 text-center md:text-left">
-            <h4 className="mb-2 text-2xl text-black">JU 5037</h4>
-            <p className="text-black">Candidata a Deputada Federal</p>
-            <p className="text-black">contato@ju5037.com</p>
+            <h4 className="mb-2 text-2xl text-white">JU 5037</h4>
+            <p className="text-white">Candidata a Deputada Federal</p>
+            <p className="text-white">contato@ju5037.com</p>
           </div>
 
           <div className="flex-shrink-0">
@@ -22,11 +29,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-2 border-black/20" />
+        <hr className="my-2 border-white/20" />
 
-        <div className="text-center text-sm text-black">
+        <div className="text-center text-sm text-white">
           <p>
-            Desenvolvido com 🩷 para uma campanha cheia de arte, audácia e afeto
+            Desenvolvido com ❤️ para uma campanha cheia de arte, audácia e afeto.
           </p>
         </div>
       </div>
