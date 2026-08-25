@@ -32,10 +32,10 @@ export default function Layout() {
         style={{
           backgroundImage: `url(${headerBackgroundImage})`,
           backgroundSize: "cover",
-          backgroundColor: "#e639a4",
+          backgroundColor: "#ef7a1e",
           animation: "header-background-pan 8s ease-in-out infinite",
           pointerEvents: isVisible ? "auto" : "none",
-          boxShadow: "0px 0px 20px black",
+          boxShadow: "0px 0px 10px black",
         }}
       >
         <div className="relative h-20">
