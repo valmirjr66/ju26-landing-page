@@ -10,8 +10,7 @@ export default function Footer() {
           <div className="flex-1 text-center md:text-left">
             <h4 className="mb-2 text-2xl text-black">JU 5037</h4>
             <p className="text-black">Candidata a Deputada Federal</p>
-            <p className="text-black">contato@jumc037.com</p>
-            <p className="text-black">Copyright © {currentYear}</p>
+            <p className="text-black">contato@ju5037.com</p>
           </div>
 
           <div className="flex-shrink-0">
