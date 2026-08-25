@@ -102,10 +102,10 @@ export default function AgendaSection() {
           <h3
             className="mb-12 text-center text-black"
             style={{
-              textShadow: `-3px -3px 0px rgba(255, 255, 255, 0.7),
-                3px -3px 0px rgba(255, 255, 255, 0.7),
-                -3px 3px 0px rgba(255, 255, 255, 0.7),
-                3px 3px 0px rgba(255, 255, 255, 0.7)`,
+              textShadow: `-3px -3px 0px rgb(255, 255, 255),
+                3px -3px 0px rgb(255, 255, 255),
+                -3px 3px 0px rgb(255, 255, 255),
+                3px 3px 0px rgb(255, 255, 255)`,
             }}
           >
             <TypeAnimation
