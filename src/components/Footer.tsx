@@ -1,4 +1,3 @@
-import backgroundImage from "@/assets/background_media/texture_grunge.png";
 import psolIcon from "@/assets/icons/psol.svg";
 
 export default function Footer() {
@@ -6,11 +5,7 @@ export default function Footer() {
     <footer
       className="w-full py-6 md:py-8"
       aria-label="Rodapé"
-      style={{
-        backgroundColor: "#4d2a64",
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-      }}
+      style={{ backgroundColor: "#4d2a64" }}
     >
       <div className="container mx-auto px-12 md:px-14">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
@@ -33,7 +28,8 @@ export default function Footer() {
 
         <div className="text-center text-sm text-white">
           <p>
-            Desenvolvido com ❤️ para uma campanha cheia de arte, audácia e afeto.
+            Desenvolvido com ❤️ para uma campanha cheia de arte, audácia e
+            afeto.
           </p>
         </div>
       </div>
