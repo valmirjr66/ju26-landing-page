@@ -30,14 +30,15 @@ function TimelineItem({
   suppressMarginBottom?: boolean;
 }) {
   return (
-    <div className={!suppressMarginBottom ? "mb-10" : ""}>
+    <div
+      className={`text-justify leading-relaxed ${!suppressMarginBottom ? "mb-10" : ""}`}
+    >
       <img
         src={img}
         alt={imgAlt}
-        className={`h-36 w-36 rounded-sm object-cover ${reverseOrder ? "float-right" : "float-left mr-3 mb-2"} `}
+        className={`mb-2 h-36 w-36 rounded-sm object-cover ${reverseOrder ? "float-right ml-3" : "float-left mr-3"}`}
       />
-
-      <span className="text-justify">{text}</span>
+      {text}
       <div className="clear-both" />
     </div>
   );
