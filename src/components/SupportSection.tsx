@@ -21,7 +21,6 @@ const MANIFESTO_FULL_PARAGRAPHS = [
   "Nós não vamos negociar aquilo que nos é de direito.",
   "Nossos corpos e corpas irão sacudir as estruturas.",
   "A gente se recusa a fazer política sem enfrentamento.",
-  "A gente exige a revolução do agora, pra que o amanhã seja livre.",
   "Nós iremos resistir à destruição de hoje pra que o amanhã seja cheio de vida.",
   `Desde os primeiros passos da humanidade, a linha entre ferramenta e arma sempre foi
   tênue e definida pelo seu uso. A mesma pedra usada para preparar o alimento também podia
