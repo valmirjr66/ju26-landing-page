@@ -112,7 +112,7 @@ export default function WhoAmISection() {
             <div className="flex justify-end">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="vaporwave-button"
+                className="cta-button"
                 aria-label="Saiba mais sobre JU 5037"
               >
                 MEUS CORRES

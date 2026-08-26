@@ -299,7 +299,7 @@ input:focus {
   padding-top: 1rem;
 }
 
-.vaporwave-button {
+.cta-button {
   background-color: #32776b;
   border: 1px solid #fff;
   color: #ffffff;
@@ -313,17 +313,17 @@ input:focus {
   transition: all 0.3s ease-out;
 }
 
-.vaporwave-button:hover:not(:disabled) {
+.cta-button:hover:not(:disabled) {
   background-color: #2a625a;
   transform: scale(1.05);
   box-shadow: 0 4px 16px rgba(245, 19, 87, 0.4);
 }
 
-.vaporwave-button:active:not(:disabled) {
+.cta-button:active:not(:disabled) {
   transform: scale(0.97);
 }
 
-.vaporwave-button:disabled {
+.cta-button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }

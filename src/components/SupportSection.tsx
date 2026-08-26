@@ -123,7 +123,7 @@ export default function SupportSection() {
                 <button
                   type="button"
                   onClick={() => setIsManifestoOpen(true)}
-                  className="vaporwave-button"
+                  className="cta-button"
                   aria-label="Ler o manifesto completo"
                   data-testid="support-manifesto-read-more"
                 >

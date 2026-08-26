@@ -422,7 +422,7 @@ export default function SupportForm() {
             !formData.city.trim() ||
             isLoading
           }
-          className="vaporwave-button disabled:cursor-not-allowed disabled:opacity-50"
+          className="cta-button disabled:cursor-not-allowed disabled:opacity-50"
           aria-label="Enviar formulário de apoio"
           data-testid="support-form-submit"
         >

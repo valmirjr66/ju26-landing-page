@@ -29,7 +29,7 @@ export default function NotFound() {
           <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <button
               onClick={handleGoHome}
-              className="vaporwave-button"
+              className="cta-button"
               aria-label="Saiba mais sobre JU 5037"
             >
               VOLTAR
