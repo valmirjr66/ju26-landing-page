@@ -162,7 +162,7 @@ export default function AgendaSection() {
       </section>
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent>
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle>{selectedAgenda?.title}</DialogTitle>
           </DialogHeader>
