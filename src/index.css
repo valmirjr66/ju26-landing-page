@@ -153,10 +153,19 @@
     transition: all 0.3s ease-out;
   }
 
+  .secondary-cta-button {
+    background-color: #32776b;
+  }
+
   .cta-button:hover {
     background-color: #d00d47;
     transform: scale(1.05);
     box-shadow: 0 4px 16px rgba(245, 19, 87, 0.4);
+  }
+
+  .secondary-cta-button:hover {
+    background-color: #243a3b;
+    box-shadow: 0 4px 16px rgba(50, 119, 107, 0.4);
   }
 
   .cta-button:active {
