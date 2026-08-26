@@ -144,7 +144,7 @@ export default function SupportSection() {
       </section>
 
       <Dialog open={isManifestoOpen} onOpenChange={setIsManifestoOpen}>
-        <DialogContent className="max-w-xl">
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>Manifesto</DialogTitle>
           </DialogHeader>

@@ -123,7 +123,7 @@ export default function WhoAmISection() {
       </section>
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-md">
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>MEUS CORRES</DialogTitle>
           </DialogHeader>
