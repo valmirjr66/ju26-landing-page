@@ -115,7 +115,7 @@ export default function SupportSection() {
                 <button
                   type="button"
                   onClick={() => setIsManifestoOpen(true)}
-                  className="cta-button secondary-cta-button"
+                  className="cta-button secondary-cta-button thin-black-stroke-effect"
                   aria-label="Ler o manifesto completo"
                   data-testid="support-manifesto-read-more"
                 >

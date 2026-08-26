@@ -151,6 +151,11 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    text-shadow:
+      -1px -1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px 1px 0px #000000;
   }
 
   .secondary-cta-button {
@@ -210,6 +215,14 @@
       2px -2px 0px #ffffff,
       -2px 2px 0px #ffffff,
       2px 2px 0px #ffffff;
+  }
+
+  .thin-black-stroke-effect {
+    text-shadow:
+      -1px -1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px 1px 0px #000000;
   }
 
   .black-stroke-effect {
