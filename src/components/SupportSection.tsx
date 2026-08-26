@@ -116,17 +116,20 @@ export default function SupportSection() {
                 className="mb-6 text-justify leading-relaxed text-black"
                 data-testid="support-manifesto-excerpt"
               >
-                {MANIFESTO_SHORT}{" "}
+                {MANIFESTO_SHORT}
+              </p>
+
+              <div className="mb-6 flex justify-center lg:justify-start">
                 <button
                   type="button"
                   onClick={() => setIsManifestoOpen(true)}
-                  className="inline font-semibold text-[#f51357] underline decoration-2 underline-offset-2"
+                  className="vaporwave-button"
                   aria-label="Ler o manifesto completo"
                   data-testid="support-manifesto-read-more"
                 >
-                  Ler manifesto
+                  LER MANIFESTO
                 </button>
-              </p>
+              </div>
 
               <p className="text-center text-sm text-black lg:text-left">
                 Ao enviar o formulário, você assina este manifesto.
