@@ -1,4 +1,4 @@
-import headerBackgroundImage from "@/assets/background_media/texture_grunge.png";
+import headerBackgroundImage from "@/assets/background_media/texture_nature_yellow.svg";
 import logo from "@/assets/icons/vertical_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import { useEffect, useState } from "react";
