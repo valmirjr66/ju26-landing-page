@@ -87,15 +87,7 @@ export default function SupportSection() {
         }}
       >
         <div className="container mx-auto max-w-xl px-4 lg:max-w-6xl">
-          <h2
-            className="mb-12 text-center text-white"
-            style={{
-              textShadow: `-3px -3px 0px rgb(0, 0, 0),
-              3px -3px 0px rgb(0, 0, 0),
-              -3px 3px 0px rgb(0, 0, 0),
-              3px 3px 0px rgb(0, 0, 0)`,
-            }}
-          >
+          <h2 className="black-stroke-effect mb-12 text-center text-white">
             COLA COM A GENTE!
           </h2>
 
@@ -108,7 +100,7 @@ export default function SupportSection() {
             }}
           >
             <div data-testid="support-manifesto">
-              <h3 className="mb-4 text-center text-black lg:text-left">
+              <h3 className="white-stroke-effect mb-4 text-center text-black lg:text-left">
                 Manifesto das armas da revolução
               </h3>
 

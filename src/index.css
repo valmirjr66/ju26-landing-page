@@ -204,6 +204,22 @@
     font-family: "Elms Sans", sans-serif;
   }
 
+  .white-stroke-effect {
+    text-shadow:
+      -2px -2px 0px #ffffff,
+      2px -2px 0px #ffffff,
+      -2px 2px 0px #ffffff,
+      2px 2px 0px #ffffff;
+  }
+
+  .black-stroke-effect {
+    text-shadow:
+      -2px -2px 0px #000000,
+      2px -2px 0px #000000,
+      -2px 2px 0px #000000,
+      2px 2px 0px #000000;
+  }
+
   /* Visível focus ring para acessibilidade */
   button:focus,
   a:focus,

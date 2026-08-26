@@ -67,15 +67,7 @@ export default function WhoAmISection() {
               padding: "2rem",
             }}
           >
-            <h3
-              className="mb-6 text-center text-black"
-              style={{
-                textShadow: `-3px -3px 0px rgb(255, 255, 255),
-                3px -3px 0px rgb(255, 255, 255),
-                -3px 3px 0px rgb(255, 255, 255),
-                3px 3px 0px rgb(255, 255, 255)`,
-              }}
-            >
+            <h3 className="white-stroke-effect mb-6 text-center text-black">
               MAIS QUE O VULGO
             </h3>
 

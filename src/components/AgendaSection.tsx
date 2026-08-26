@@ -99,15 +99,7 @@ export default function AgendaSection() {
         }}
       >
         <div className="container mx-auto px-4">
-          <h3
-            className="mb-12 text-center text-black"
-            style={{
-              textShadow: `-3px -3px 0px rgb(255, 255, 255),
-                3px -3px 0px rgb(255, 255, 255),
-                -3px 3px 0px rgb(255, 255, 255),
-                3px 3px 0px rgb(255, 255, 255)`,
-            }}
-          >
+          <h3 className="white-stroke-effect mb-12 text-center text-black">
             <TypeAnimation
               sequence={[
                 "NOSSO PAPO",
