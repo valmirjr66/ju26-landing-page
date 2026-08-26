@@ -395,8 +395,8 @@ export default function SupportForm() {
           data-testid="support-form-terms"
         >
           <span className="text-justify text-xs leading-tight text-black">
-            Ao enviar as informações, você autoriza o uso dos seus dados para
-            comunicação da campanha de Júlia Soares, conforme o{" "}
+            Ao enviar as informações você autoriza o uso dos seus dados pela
+            campanha de Júlia Soares, conforme o{" "}
             <a
               href={TERM_URL}
               target="_blank"
@@ -406,9 +406,7 @@ export default function SupportForm() {
             >
               Termo de Consentimento
             </a>
-            . Seus dados serão protegidos e utilizados exclusivamente para
-            comunicações relacionadas à campanha, sem compartilhamento indevido
-            com terceiros.
+            .
           </span>
         </div>
       </div>
