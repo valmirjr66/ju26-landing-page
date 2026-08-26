@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/texture_paper.jpg";
+import backgroundImage from "@/assets/background_media/textura_leaves.svg";
 
 export default function PlaylistSection() {
   return (
@@ -10,10 +10,19 @@ export default function PlaylistSection() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "bottom",
+        backgroundColor: "#32776b",
       }}
     >
       <div className="container mx-auto max-w-xl px-4 md:max-w-2xl">
-        <h2 className="mb-12 text-center text-black">
+        <h2
+          className="mb-12 text-center text-black"
+          style={{
+            textShadow: `-3px -3px 0px rgb(255, 255, 255),
+              3px -3px 0px rgb(255, 255, 255),
+              -3px 3px 0px rgb(255, 255, 255),
+              3px 3px 0px rgb(255, 255, 255)`,
+          }}
+        >
           UMA PLAYLIST FALA MAIS QUE MIL PALAVRAS
         </h2>
         <iframe

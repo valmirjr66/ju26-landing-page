@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/textura_leaves.svg";
+import backgroundImage from "@/assets/background_media/texture_paper.jpg";
 import timelinePhoto1 from "@/assets/photos/timeline_1.jpg";
 import timelinePhoto2 from "@/assets/photos/timeline_2.jpg";
 import timelinePhoto3 from "@/assets/photos/timeline_3.jpg";
@@ -55,7 +55,6 @@ export default function WhoAmISection() {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          backgroundColor: "#32776b",
         }}
       >
         <div className="container mx-auto max-w-2xl px-4">
