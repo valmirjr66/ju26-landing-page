@@ -10,6 +10,7 @@ import timelinePhoto8 from "@/assets/photos/timeline_8.jpg";
 import timelinePhoto9 from "@/assets/photos/timeline_9.jpg";
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -121,8 +122,8 @@ export default function WhoAmISection() {
           <DialogHeader>
             <DialogTitle className="text-white">MEUS CORRES</DialogTitle>
           </DialogHeader>
-          <div
-            className="overflow-y-auto py-4 leading-relaxed text-white"
+          <DialogBody
+            className="overflow-y-auto leading-relaxed"
             style={{ maxHeight: 400 }}
           >
             <TimelineItem
@@ -233,7 +234,7 @@ export default function WhoAmISection() {
               formações e muito rap."
               suppressMarginBottom
             />
-          </div>
+          </DialogBody>
         </DialogContent>
       </Dialog>
     </>

@@ -1,6 +1,7 @@
 import backgroundImage from "@/assets/background_media/texture_nature_purple.svg";
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -139,15 +140,15 @@ export default function SupportSection() {
           <DialogHeader>
             <DialogTitle className="text-white">Manifesto</DialogTitle>
           </DialogHeader>
-          <div
-            className="space-y-4 overflow-y-auto py-4 text-justify leading-relaxed text-white"
+          <DialogBody
+            className="space-y-4 overflow-y-auto text-justify leading-relaxed"
             style={{ maxHeight: 400 }}
             data-testid="support-manifesto-full"
           >
             {MANIFESTO_FULL_PARAGRAPHS.map(paragraph => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-          </div>
+          </DialogBody>
         </DialogContent>
       </Dialog>
     </>

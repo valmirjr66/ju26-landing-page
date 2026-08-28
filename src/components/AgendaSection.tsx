@@ -11,6 +11,7 @@ import womenIcon from "@/assets/icons/women.png";
 import youthIcon from "@/assets/icons/youth.png";
 import {
   Dialog,
+  DialogBody,
   DialogContent,
   DialogHeader,
   DialogTitle,
@@ -163,7 +164,7 @@ export default function AgendaSection() {
               {selectedAgenda?.title}
             </DialogTitle>
           </DialogHeader>
-          <div className="py-4">
+          <DialogBody>
             <div
               className="mb-2 w-full overflow-hidden rounded-lg border-1 border-white"
               style={{
@@ -173,10 +174,10 @@ export default function AgendaSection() {
                 backgroundPosition: "center",
               }}
             />
-            <p className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify leading-relaxed text-white">
+            <p className="max-h-64 overflow-y-auto p-4 text-justify leading-relaxed">
               {selectedAgenda?.content}
             </p>
-          </div>
+          </DialogBody>
         </DialogContent>
       </Dialog>
     </>
