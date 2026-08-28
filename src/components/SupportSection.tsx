@@ -135,7 +135,7 @@ export default function SupportSection() {
       </section>
 
       <Dialog open={isManifestoOpen} onOpenChange={setIsManifestoOpen}>
-        <DialogContent className="border-transparent bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
+        <DialogContent className="border-2 border-white bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
           <DialogHeader>
             <DialogTitle className="text-white">Manifesto</DialogTitle>
           </DialogHeader>

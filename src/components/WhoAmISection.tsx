@@ -117,12 +117,12 @@ export default function WhoAmISection() {
       </section>
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent>
+        <DialogContent className="border-2 border-white bg-[#4a2583] text-white [&_[data-slot=dialog-close]]:text-white">
           <DialogHeader>
-            <DialogTitle>MEUS CORRES</DialogTitle>
+            <DialogTitle className="text-white">MEUS CORRES</DialogTitle>
           </DialogHeader>
           <div
-            className="overflow-y-auto py-4 text-black"
+            className="overflow-y-auto py-4 leading-relaxed text-white"
             style={{ maxHeight: 400 }}
           >
             <TimelineItem
