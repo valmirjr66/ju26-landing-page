@@ -135,12 +135,12 @@ export default function SupportSection() {
       </section>
 
       <Dialog open={isManifestoOpen} onOpenChange={setIsManifestoOpen}>
-        <DialogContent>
+        <DialogContent className="border-transparent bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
           <DialogHeader>
-            <DialogTitle>Manifesto</DialogTitle>
+            <DialogTitle className="text-white">Manifesto</DialogTitle>
           </DialogHeader>
           <div
-            className="space-y-4 overflow-y-auto py-4 text-justify leading-relaxed text-black"
+            className="space-y-4 overflow-y-auto py-4 text-justify leading-relaxed text-white"
             style={{ maxHeight: 400 }}
             data-testid="support-manifesto-full"
           >
