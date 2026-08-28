@@ -154,13 +154,18 @@ export default function AgendaSection() {
       </section>
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent
+          className="max-w-2xl border-2 border-white text-white [&_[data-slot=dialog-close]]:text-white"
+          style={{ backgroundColor: selectedAgenda?.bgColor }}
+        >
           <DialogHeader>
-            <DialogTitle>{selectedAgenda?.title}</DialogTitle>
+            <DialogTitle className="text-white">
+              {selectedAgenda?.title}
+            </DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <div
-              className="mb-2 w-full overflow-hidden rounded-t-lg"
+              className="mb-2 w-full overflow-hidden rounded-lg border-1 border-white"
               style={{
                 height: "100px",
                 backgroundImage: `url(${selectedAgenda?.background})`,
@@ -168,7 +173,7 @@ export default function AgendaSection() {
                 backgroundPosition: "center",
               }}
             />
-            <p className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify text-black">
+            <p className="max-h-64 overflow-y-auto rounded-b-sm p-2 text-justify leading-relaxed text-white">
               {selectedAgenda?.content}
             </p>
           </div>
