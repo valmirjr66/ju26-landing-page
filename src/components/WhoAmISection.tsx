@@ -32,12 +32,12 @@ function TimelineItem({
 }) {
   return (
     <div
-      className={`text-justify leading-relaxed ${!suppressMarginBottom ? "mb-10" : ""}`}
+      className={`text-justify leading-relaxed ${reverseOrder ? "md:pl-8" : "md:pr-8"} ${!suppressMarginBottom ? "mb-10" : ""}`}
     >
       <img
         src={img}
         alt={imgAlt}
-        className={`mb-2 h-36 w-36 rounded-sm object-cover ${reverseOrder ? "float-right ml-3" : "float-left mr-3"}`}
+        className={`mb-2 h-36 w-36 rounded-sm object-cover ${reverseOrder ? "float-right ml-3 md:ml-4" : "float-left mr-3 md:mr-4"}`}
       />
       {text}
       <div className="clear-both" />
@@ -162,6 +162,7 @@ export default function WhoAmISection() {
             />
 
             <TimelineItem
+              reverseOrder
               img={timelinePhoto4}
               imgAlt="Ju de beca em sua formatura da universidade"
               text="Foram 6 anos de muito estudo, luta e aprendizado na Universidade de Itaúna.
@@ -173,7 +174,6 @@ export default function WhoAmISection() {
             />
 
             <TimelineItem
-              reverseOrder
               img={timelinePhoto5}
               imgAlt="Ju com outras militantes do PSOL segundo uma bandeira do partido"
               text="Quando meus caminhos se cruzam com a Juventude Manifesta e com o PSOL,
@@ -210,6 +210,7 @@ export default function WhoAmISection() {
             />
 
             <TimelineItem
+              reverseOrder
               img={timelinePhoto8}
               imgAlt="Registro de uma das primeiras edições da Manifesta Rap"
               text="Em 2025 a Juventude Manifesta seguiu firme e cada vez mais forte,
