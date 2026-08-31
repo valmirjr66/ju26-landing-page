@@ -3,7 +3,7 @@ import instagramIcon from "@/assets/icons/instagram.svg";
 export default function InstagramIcon() {
   return (
     <a
-      href="https://instagram.com/jumc037"
+      href="https://instagram.com/jumc5037"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Seguir no Instagram"
