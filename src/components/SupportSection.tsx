@@ -136,18 +136,27 @@ export default function SupportSection() {
       </section>
 
       <Dialog open={isManifestoOpen} onOpenChange={setIsManifestoOpen}>
-        <DialogContent className="border-2 border-white bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
-          <DialogHeader>
+        <DialogContent className="flex flex-col overflow-hidden border-2 border-white bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
+          <DialogHeader className="shrink-0">
             <DialogTitle className="text-white">Manifesto</DialogTitle>
           </DialogHeader>
-          <DialogBody
-            className="space-y-4 overflow-y-auto text-justify leading-relaxed"
-            style={{ maxHeight: 400 }}
-            data-testid="support-manifesto-full"
-          >
-            {MANIFESTO_FULL_PARAGRAPHS.map(paragraph => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <DialogBody className="min-h-0 flex-1 overflow-y-auto">
+            <div
+              className="space-y-4 text-justify leading-relaxed"
+              data-testid="support-manifesto-full"
+            >
+              {MANIFESTO_FULL_PARAGRAPHS.map(paragraph => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+
+            <div
+              className="mt-8 rounded-2xl p-6"
+              style={{ backgroundColor: "#f1c325" }}
+              data-testid="support-manifesto-form"
+            >
+              <SupportForm testIdPrefix="support-form-dialog" />
+            </div>
           </DialogBody>
         </DialogContent>
       </Dialog>

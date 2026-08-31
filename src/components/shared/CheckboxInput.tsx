@@ -5,12 +5,13 @@ export default function CheckboxInput({
   label,
   checked,
   onChange,
+  htmlId,
   dataTestId,
 }: CheckboxInputProps) {
   return (
     <label className="flex cursor-pointer items-start gap-3">
       <input
-        id={id}
+        id={htmlId ?? id}
         name={id}
         type="checkbox"
         checked={checked}

@@ -1,7 +1,7 @@
 import { type FormData } from "@/types/SupportForm";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useMask } from "@react-input/mask";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { toast } from "sonner";
 import CheckboxInput from "./CheckboxInput";
 import FormInput, { InputErrorMessage } from "./FormInput";
@@ -45,7 +45,16 @@ const FILE_ACCEPT = ALLOWED_EXTENSIONS.flatMap(ext =>
   ext === "jpeg" ? [".jpg", ".jpeg"] : [`.${ext}`]
 ).join(",");
 
-export default function SupportForm() {
+type SupportFormProps = {
+  testIdPrefix?: string;
+};
+
+export default function SupportForm({
+  testIdPrefix = "support-form",
+}: SupportFormProps) {
+  const instanceId = useId();
+  const fieldHtmlId = (field: string) => `${instanceId}-${field}`;
+
   const phoneNumberInputRef = useMask({
     mask: "(__) _____-____",
     replacement: { _: /\d/ },
@@ -234,7 +243,7 @@ export default function SupportForm() {
   };
 
   return isSubmitted ? (
-    <div className="py-8 text-center" data-testid="support-form-success">
+    <div className="py-8 text-center" data-testid={`${testIdPrefix}-success`}>
       <DotLottieReact
         src="/ok.lottie"
         autoplay
@@ -250,63 +259,69 @@ export default function SupportForm() {
     <form
       onSubmit={handleSubmit}
       className="space-y-4"
-      data-testid="support-form"
+      data-testid={testIdPrefix}
     >
       <div>
         <FormInput
           id="name"
+          htmlId={fieldHtmlId("name")}
           type="text"
           title="Nome"
           value={formData.name}
           onChange={handleChange}
           errors={errors}
-          dataTestId="support-form-name"
+          dataTestId={`${testIdPrefix}-name`}
         />
         <InputErrorMessage
           errors={errors}
           fieldName="name"
-          dataTestId="support-form-name-error"
+          htmlId={fieldHtmlId("name")}
+          dataTestId={`${testIdPrefix}-name-error`}
         />
       </div>
 
       <div>
         <FormInput
           id="email"
+          htmlId={fieldHtmlId("email")}
           type="email"
           title="E-mail"
           value={formData.email}
           onChange={handleChange}
           errors={errors}
-          dataTestId="support-form-email"
+          dataTestId={`${testIdPrefix}-email`}
         />
         <InputErrorMessage
           errors={errors}
           fieldName="email"
-          dataTestId="support-form-email-error"
+          htmlId={fieldHtmlId("email")}
+          dataTestId={`${testIdPrefix}-email-error`}
         />
       </div>
 
       <div>
         <FormInput
           id="whatsapp"
+          htmlId={fieldHtmlId("whatsapp")}
           type="tel"
           title="WhatsApp"
           value={formData.whatsapp}
           onChange={handleChange}
           errors={errors}
           ref={phoneNumberInputRef}
-          dataTestId="support-form-whatsapp"
+          dataTestId={`${testIdPrefix}-whatsapp`}
         />
         <InputErrorMessage
           errors={errors}
           fieldName="whatsapp"
-          dataTestId="support-form-whatsapp-error"
+          htmlId={fieldHtmlId("whatsapp")}
+          dataTestId={`${testIdPrefix}-whatsapp-error`}
         />
       </div>
 
       <p
         className="text-center text-xs text-gray-600"
-        data-testid="support-form-contact-hint"
+        data-testid={`${testIdPrefix}-contact-hint`}
       >
         Informe pelo menos um meio de contato: e-mail ou WhatsApp.
       </p>
@@ -314,49 +329,54 @@ export default function SupportForm() {
       <div>
         <FormInput
           id="city"
+          htmlId={fieldHtmlId("city")}
           type="text"
           title="Cidade"
           value={formData.city}
           onChange={handleChange}
           errors={errors}
-          dataTestId="support-form-city"
+          dataTestId={`${testIdPrefix}-city`}
         />
         <InputErrorMessage
           errors={errors}
           fieldName="city"
-          dataTestId="support-form-city-error"
+          htmlId={fieldHtmlId("city")}
+          dataTestId={`${testIdPrefix}-city-error`}
         />
       </div>
 
       <div className="space-y-3 pt-2">
         <CheckboxInput
           id="check_supportSocialMedia"
+          htmlId={fieldHtmlId("check_supportSocialMedia")}
           checked={formData.check_supportSocialMedia}
           onChange={handleChange}
           label="Quero apoiar nas redes"
-          dataTestId="support-form-check-support-social-media"
+          dataTestId={`${testIdPrefix}-check-support-social-media`}
         />
 
         <CheckboxInput
           id="check_supportStreets"
+          htmlId={fieldHtmlId("check_supportStreets")}
           checked={formData.check_supportStreets}
           onChange={handleChange}
           label="Quero apoiar nas ruas"
-          dataTestId="support-form-check-support-streets"
+          dataTestId={`${testIdPrefix}-check-support-streets`}
         />
 
         <CheckboxInput
           id="check_supportArt"
+          htmlId={fieldHtmlId("check_supportArt")}
           checked={formData.check_supportArt}
           onChange={handleChange}
           label="Quero contribuir com a minha arte"
-          dataTestId="support-form-check-support-art"
+          dataTestId={`${testIdPrefix}-check-support-art`}
         />
 
         {ENABLE_ART_UPLOAD && formData.check_supportArt && (
           <div
             className="mx-2 mt-3 space-y-2 rounded-lg border border-yellow-400 bg-pink-100 p-4"
-            data-testid="support-form-art-upload"
+            data-testid={`${testIdPrefix}-art-upload`}
           >
             <p className="text-xs text-black">
               Você pode enviar uma obra (imagem, áudio ou vídeo) agora ou, se
@@ -370,7 +390,7 @@ export default function SupportForm() {
               accept={FILE_ACCEPT}
               onChange={handleChange}
               className="w-full text-sm text-black file:mr-4 file:block file:rounded-lg file:border-0 file:bg-pink-500 file:px-4 file:py-2 file:text-white hover:file:bg-pink-600"
-              data-testid="support-form-art-file"
+              data-testid={`${testIdPrefix}-art-file`}
             />
 
             <p className="text-xs text-gray-600">
@@ -384,15 +404,16 @@ export default function SupportForm() {
 
         <CheckboxInput
           id="check_receiveMaterial"
+          htmlId={fieldHtmlId("check_receiveMaterial")}
           checked={formData.check_receiveMaterial}
           onChange={handleChange}
           label="Gostaria de receber material de campanha"
-          dataTestId="support-form-check-receive-material"
+          dataTestId={`${testIdPrefix}-check-receive-material`}
         />
 
         <div
           className="border-t-1 border-b-1 border-yellow-500 p-2"
-          data-testid="support-form-terms"
+          data-testid={`${testIdPrefix}-terms`}
         >
           <span className="text-justify text-xs leading-tight text-black">
             Ao enviar as informações você autoriza o uso dos seus dados pela
@@ -402,7 +423,7 @@ export default function SupportForm() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-800 underline"
-              data-testid="support-form-terms-link"
+              data-testid={`${testIdPrefix}-terms-link`}
             >
               Termo de Consentimento
             </a>
@@ -422,7 +443,7 @@ export default function SupportForm() {
           }
           className="cta-button disabled:cursor-not-allowed disabled:opacity-50"
           aria-label="Enviar formulário de apoio"
-          data-testid="support-form-submit"
+          data-testid={`${testIdPrefix}-submit`}
         >
           {isLoading ? "ENVIANDO..." : "ENVIAR"}
         </button>
