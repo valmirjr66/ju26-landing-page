@@ -16,7 +16,7 @@ import horizontalLogo from "@/assets/icons/horizontal_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
 import juPortrait2 from "@/assets/photos/ju_portrait_2.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import InstagramIcon from "./shared/InstagramIcon";
 
 const PORTRAITS = [juPortrait1, juPortrait2] as const;
@@ -136,6 +136,16 @@ function ArtInstrumentLayer({
   );
 }
 
+function scrollToSupportForm(event: MouseEvent<HTMLAnchorElement>) {
+  const section = document.getElementById("support-form");
+  if (!section) {
+    return;
+  }
+
+  event.preventDefault();
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -201,6 +211,7 @@ export default function HeroSection() {
         </h4>
         <a
           href="#support-form"
+          onClick={scrollToSupportForm}
           className="cta-button cta-button-sm secondary-cta-button cta-button-pulse mb-2 inline-block no-underline md:mb-3"
           aria-label="Aliste-se"
         >
