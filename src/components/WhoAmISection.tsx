@@ -1,4 +1,4 @@
-import backgroundImage from "@/assets/background_media/texture_grunge.png";
+import backgroundImage from "@/assets/background_media/texture_nature_green.svg";
 import timelinePhoto1 from "@/assets/photos/timeline_1.jpg";
 import timelinePhoto2 from "@/assets/photos/timeline_2.jpg";
 import timelinePhoto3 from "@/assets/photos/timeline_3.jpg";
