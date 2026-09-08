@@ -81,27 +81,17 @@ export default function WhoAmISection() {
               Nasci e cresci em berço evangélico, onde aprendi sobre amor e
               coletividade. Apesar da contradição da instituição Igreja, ainda
               hoje o Jesus negro, amoroso, da periferia de Nazaré, permanece
-              guiando meus passos. Já interpretando o mundo pela ótica do amor,
-              tive referências intelectuais que me ensinaram a ser crítica sobre
-              a realidade.
+              guiando meus passos.
               <br />
               <br />
-              Apesar disso, faltava movimento. Somente fazendo medicina na UIT,
-              há quase 10 anos atrás, começo a me organizar em coletivos. Fiz
-              parte da DENEM, do DALASS e dos coletivos de mulheres Nise da
-              Silveira e LGBTQIAPN+ Indianara Siqueira.
+              E foi um dos poucos mediciners negros da UIT que mudou o rumo da
+              minha vida: ele me convidou pra uma reunião do PSOL e me aplicou
+              no rap. Assim, me encontrei politicamente e me forjei dirigente.
               <br />
               <br />
-              Mas foi um dos poucos mediciners negros da UIT que mudou o rumo da
-              minha vida. Ele me convidou pra uma reunião do PSOL e me aplicou
-              no rap. Assim, me encontrei politicamente no PSOL e na Juventude
-              Manifesta, onde me forjo liderança na prática.
-              <br />
-              <br />
-              Já amando o rap e querendo conhecer outros jovens na minha cidade,
-              descobri o Culture, um bar que reunia todo tipo de galera.
-              Inclusive as mina do hip hop. E foi assim, há 4 anos atrás, que me
-              tornei artista e produtora cultural.
+              Há 4 anos atrás descobri o Culture, um bar que reunia todo tipo de
+              galera, inclusive as mina do hip hop. E foi assim, que me tornei
+              artista e produtora cultural.
             </p>
 
             <div className="flex justify-end">
