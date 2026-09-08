@@ -92,7 +92,7 @@ export default function SupportForm({
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Nome é obrigatório";
+      newErrors.name = "Insira seu nome, vulgo ou apelido";
     }
 
     const hasEmail = formData.email.trim() !== "";
@@ -266,7 +266,7 @@ export default function SupportForm({
           id="name"
           htmlId={fieldHtmlId("name")}
           type="text"
-          title="Nome"
+          title="Nome, vulgo ou apelido"
           value={formData.name}
           onChange={handleChange}
           errors={errors}
