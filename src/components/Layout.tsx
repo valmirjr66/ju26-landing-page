@@ -1,5 +1,5 @@
 import headerBackgroundImage from "@/assets/background_media/texture_nature_yellow.svg";
-import logo from "@/assets/icons/vertical_logo.png";
+import logo from "@/assets/icons/horizontal_logo.png";
 import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import { useEffect, useState } from "react";
 
@@ -32,7 +32,7 @@ export default function Layout() {
         style={{
           backgroundImage: `url(${headerBackgroundImage})`,
           backgroundSize: "cover",
-          backgroundColor: "#ef7a1e",
+          backgroundColor: "#4A2583",
           animation: "header-background-pan 8s ease-in-out infinite",
           pointerEvents: isVisible ? "auto" : "none",
           boxShadow: "0px 0px 10px black",
@@ -43,13 +43,15 @@ export default function Layout() {
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
             title="Voltar ao topo"
-            className="absolute top-0 left-1/2 -translate-x-1/2"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <img
               id="header-logo"
               src={logo}
               alt="Voltar ao topo"
-              className="h-24 w-24 origin-top transition-transform hover:scale-110"
+              width={1054}
+              height={368}
+              className="h-16 w-auto origin-center object-contain transition-transform hover:scale-110 sm:h-[4.5rem]"
             />
           </button>
         </div>
