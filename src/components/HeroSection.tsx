@@ -13,11 +13,9 @@ import artInstrument8 from "@/assets/art_instruments/art_instrument_8.png";
 import artInstrument9 from "@/assets/art_instruments/art_instrument_9.png";
 import textureNature from "@/assets/background_media/texture_nature_yellow.svg";
 import horizontalLogo from "@/assets/icons/horizontal_logo.png";
-import whatsappIcon from "@/assets/icons/whatsapp.svg";
 import juPortrait1 from "@/assets/photos/ju_portrait_1.png";
 import juPortrait2 from "@/assets/photos/ju_portrait_2.png";
 import { useEffect, useState, type MouseEvent } from "react";
-import InstagramIcon from "./shared/InstagramIcon";
 
 const PORTRAITS = [juPortrait1, juPortrait2] as const;
 const SWAP_INTERVAL_MS = 3000;
@@ -206,47 +204,14 @@ export default function HeroSection() {
             className="mx-auto h-auto max-h-[min(17.6svh,8rem)] w-auto max-w-[80%] object-contain drop-shadow-[5px_5px_5px_rgba(0,0,0,0.5)] sm:max-h-[min(20.8svh,9.6rem)] md:max-h-[min(24svh,12.8rem)] md:max-w-[44.8rem] lg:max-h-[min(25.6svh,14.4rem)] lg:max-w-[51.2rem]"
           />
         </h1>
-        <h4 className="mb-2 font-normal text-white [-webkit-text-stroke:3px_black] [paint-order:stroke_fill] md:mb-3">
-          Candidata a Deputada Federal
-        </h4>
         <a
           href="#support-form"
           onClick={scrollToSupportForm}
-          className="cta-button cta-button-sm secondary-cta-button cta-button-pulse mb-2 inline-block no-underline md:mb-3"
+          className="cta-button cta-button-sm secondary-cta-button cta-button-pulse mt-4 mb-2 inline-block no-underline md:mt-6 md:mb-3"
           aria-label="Aliste-se"
         >
           Aliste-se
         </a>
-        <div className="mb-1 flex items-center px-4 py-2">
-          <InstagramIcon />
-          <a
-            href="https://chat.whatsapp.com/FkJKTafjgb67w1chNIN8wE?s=sw&p=i&mlu=4&amv=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contato via WhatsApp"
-            className="icon-button ml-6"
-          >
-            <img
-              src={whatsappIcon}
-              alt="WhatsApp"
-              className="h-10 w-10 transition-transform hover:scale-110 md:h-12 md:w-12"
-            />
-          </a>
-        </div>
-        <svg
-          className="h-6 w-6 animate-bounce text-white"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
       </div>
     </section>
   );
