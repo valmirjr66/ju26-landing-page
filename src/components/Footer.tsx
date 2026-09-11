@@ -1,5 +1,3 @@
-import psolIcon from "@/assets/icons/psol.svg";
-
 export default function Footer() {
   return (
     <footer
@@ -15,9 +13,7 @@ export default function Footer() {
             <p className="text-white">contato@ju5037.com</p>
           </div>
 
-          <div className="flex-shrink-0 text-white">
-            FEDERAÇÃO PSOL-REDE
-          </div>
+          <div className="flex-shrink-0 text-white">FEDERAÇÃO PSOL-REDE</div>
         </div>
 
         <hr className="my-2 border-white/20" />
