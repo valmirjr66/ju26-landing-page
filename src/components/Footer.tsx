@@ -15,12 +15,8 @@ export default function Footer() {
             <p className="text-white">contato@ju5037.com</p>
           </div>
 
-          <div className="flex-shrink-0">
-            <img
-              src={psolIcon}
-              alt="PSOL - Partido Socialismo e Liberdade"
-              className="h-20 w-20 object-contain md:h-28 md:w-28"
-            />
+          <div className="flex-shrink-0 text-white">
+            FEDERAÇÃO PSOL-REDE
           </div>
         </div>
 
