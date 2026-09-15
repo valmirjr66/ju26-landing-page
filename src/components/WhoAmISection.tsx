@@ -52,16 +52,19 @@ export default function WhoAmISection() {
     <>
       <section
         id="who-am-i"
-        className="relative w-full overflow-hidden py-15 md:py-15"
+        className="relative w-full overflow-hidden py-15 md:py-20"
         aria-label="Seção Quem Sou Eu"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
+          backgroundPosition: "bottom",
           backgroundColor: "#32776b",
         }}
       >
-        <div className="container mx-auto max-w-2xl px-4">
+        <div className="container mx-auto px-4">
           <div
+            id="frame-container"
+            className="grid items-stretch gap-8 lg:grid-cols-2"
             style={{
               backgroundColor: "#f1c325",
               opacity: 0.95,
@@ -69,31 +72,60 @@ export default function WhoAmISection() {
               padding: "2rem",
             }}
           >
-            <h3 className="white-stroke-effect mb-6 text-center text-black">
-              MAIS QUE O VULGO
-            </h3>
+            {/* Quem sou eu */}
+            <div className="flex flex-col justify-between">
+              <div>
+                <h3 className="white-stroke-effect mb-6 text-center text-black -rotate-1">
+                  MAIS QUE O VULGO
+                </h3>
 
-            <p className="mb-8 text-justify leading-relaxed text-black">
-              Eu sou a Ju. Há 9 anos, estou na luta coletiva por justiça social
-              e climática. Cresci em berço evangélico, onde aprendi sobre amor e
-              coletividade. Mesmo diante das contradições da Igreja, sigo guiada
-              pelo Jesus negro, amoroso e periférico de Nazaré.
-              <br />E foi um dos poucos mediciners negros da UIT que me convidou
-              para uma reunião do PSOL e me apresentou ao rap. Ali, me encontrei
-              politicamente e me forjei dirigente.
-              <br />Há 4 anos, descobri o
-              Culture, bar que reunia o hip hop. Foi ali que me tornei artista e
-              produtora cultural.
-            </p>
+                <p className="mb-8 text-justify leading-relaxed text-black">
+                  Eu sou a Ju. Há 9 anos, estou na luta coletiva por justiça
+                  social e climática. Cresci em berço evangélico, onde aprendi
+                  sobre amor e coletividade. Mesmo diante das contradições da
+                  Igreja, sigo guiada pelo Jesus negro, amoroso e periférico de
+                  Nazaré.
+                  <br />
+                  E foi um dos poucos mediciners negros da UIT que me convidou
+                  para uma reunião do PSOL e me apresentou ao rap. Ali, me
+                  encontrei politicamente e me forjei dirigente.
+                  <br />
+                  Há 4 anos, descobri o Culture, bar que reunia o hip hop. Foi
+                  ali que me tornei artista e produtora cultural.
+                </p>
+              </div>
 
-            <div className="flex justify-end">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="cta-button"
-                aria-label="Saiba mais sobre JU 5037"
-              >
-                MEUS CORRES
-              </button>
+              <div className="flex justify-end">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="cta-button"
+                  aria-label="Saiba mais sobre JU 5037"
+                >
+                  MEUS CORRES
+                </button>
+              </div>
+            </div>
+
+            {/* Playlist */}
+            <div className="flex min-w-0 flex-col">
+              <h2 className="white-stroke-effect mb-8 rotate-1 text-center text-black">
+                UMA PLAYLIST FALA MAIS QUE MIL PALAVRAS
+              </h2>
+
+              <div className="flex flex-1">
+                <iframe
+                  data-testid="embed-iframe"
+                  src="https://open.spotify.com/embed/playlist/2yLDLpE5k5kt578B4e9iPd?utm_source=generator&theme=0&si=053c2d49c3014213"
+                  width="100%"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="min-h-[352px] w-full flex-1 -rotate-1"
+                  style={{
+                    borderRadius: 12,
+                    outline: "3px solid white",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
