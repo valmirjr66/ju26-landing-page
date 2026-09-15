@@ -98,7 +98,7 @@ export default function WhoAmISection() {
               <div className="flex justify-end">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="cta-button"
+                  className="cta-button -rotate-2"
                   aria-label="Saiba mais sobre JU 5037"
                 >
                   MEUS CORRES
@@ -108,7 +108,7 @@ export default function WhoAmISection() {
 
             {/* Playlist */}
             <div className="flex min-w-0 flex-col">
-              <h2 className="white-stroke-effect mb-8 rotate-1 text-center text-black">
+              <h2 className="white-stroke-effect mb-8 -rotate-1 text-center text-black">
                 UMA PLAYLIST FALA MAIS QUE MIL PALAVRAS
               </h2>
 
