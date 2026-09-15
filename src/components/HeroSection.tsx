@@ -2,8 +2,16 @@ import previewVideo from "@/assets/background_media/loop_video.mp4";
 import textureNature from "@/assets/background_media/texture_nature_yellow.svg";
 import horizontalLogo from "@/assets/icons/horizontal_logo.png";
 import playIcon from "@/assets/icons/play.svg";
+import {
+  Dialog,
+  DialogBody,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/shared/dialog";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState } from "react";
+import SupportForm from "./shared/SupportForm";
 
 export default function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -88,40 +96,34 @@ export default function HeroSection() {
         </button>
       </section>
 
-      {/* YouTube overlay */}
-      {isVideoOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Vídeo"
-          onClick={() => setIsVideoOpen(false)}
-        >
-          <div
-            className="relative aspect-video w-full max-w-6xl"
-            onClick={event => event.stopPropagation()}
-          >
-            <iframe
-              className="h-full w-full"
-              src="https://www.youtube.com/embed/9JvN6de5qeU?autoplay=1"
-              title="JU MC 037"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              style={{ border: "none" }}
-            />
+      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+        <DialogContent className="flex flex-col overflow-hidden border-2 border-white bg-[#32776b] text-white [&_[data-slot=dialog-close]]:text-white">
+          <DialogHeader className="shrink-0">
+            <DialogTitle className="text-white">ARMAS DA REVOLUÇÃO</DialogTitle>
+          </DialogHeader>
+          <DialogBody className="min-h-0 flex-1 overflow-y-auto">
+            <div className="aspect-video w-full max-w-6xl">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/9JvN6de5qeU?autoplay=1"
+                title="JU MC 037"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ border: "none" }}
+              />
+            </div>
 
-            <button
-              type="button"
-              onClick={() => setIsVideoOpen(false)}
-              className="absolute -top-12 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-2xl text-white hover:bg-black"
-              aria-label="Fechar vídeo"
+            <div
+              className="mt-8 rounded-2xl p-6"
+              style={{ backgroundColor: "#f1c325" }}
+              data-testid="support-movie-form"
             >
-              ×
-            </button>
-          </div>
-        </div>
-      )}
+              <SupportForm testIdPrefix="movie-dialog" />
+            </div>
+          </DialogBody>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
