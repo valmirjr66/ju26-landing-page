@@ -44,7 +44,7 @@ export default function HeroSection() {
         {/* Optional overlay to improve contrast */}
         <div className="absolute inset-0 bg-black/80" aria-hidden="true" />
 
-        <h1 className="absolute top-5 m-0 w-full max-w-full -rotate-2 leading-none text-[0]">
+        <h1 className="absolute top-5 m-0 w-full max-w-full -rotate-2 leading-none text-[0] hover:scale-110">
           <img
             src={horizontalLogo}
             alt="JU 5037"
