@@ -26,6 +26,7 @@ interface AgendaItem {
   background: string;
   bgColor: string;
   content: string;
+  rotation: number;
 }
 
 const agendaItems: AgendaItem[] = [
@@ -35,6 +36,7 @@ const agendaItems: AgendaItem[] = [
     icon: environmentIcon,
     background: environmentBackground,
     bgColor: "#32776B",
+    rotation: 3,
     content:
       "Defender o meio ambiente é defender a vida. É defender quem perde a casa na enchente, quem sofre com o calor extremo, quem fica sem água, quem vive ao lado da mineração predatória, quem protege solos e florestas e quem sempre paga a conta da destruição. Em Minas Gerais, conhecemos de perto o preço de colocar o lucro acima das pessoas. Mariana e Brumadinho não foram acidentes: foram consequências de escolhas políticas. Vamos lutar pela elaboração do Estatuto Nacional de Justiça Climática para determinar prioridade de investimentos e de planejamentos emergentes para periferias, áreas de risco, municípios vulneráveis; elaboração de Planos de Adaptação Climática; pela regulamentação de projetos para reutilizar áreas públicas degradadas e transformar espaços abandonados em espaços de convivência e cuidado mútuo para manutenção constante do meio ambiente.",
   },
@@ -44,6 +46,7 @@ const agendaItems: AgendaItem[] = [
     icon: cultureIcon,
     background: cultureBackground,
     bgColor: "#4D2A64",
+    rotation: -2.5,
     content:
       "A cultura não é um privilégio, é um direito. Uma ferramenta de transformação e uma das maiores riquezas do nosso povo. Foi através da cultura que milhares de jovens encontraram voz, pertencimento e oportunidade. O Hip Hop nos ensinou que arte também é educação, organização, consciência e resistência. Defender a cultura é defender quem vive dela: artistas, produtores, coletivos, técnicos e trabalhadores que movimentam a economia criativa todos os dias. Vamos lutar pela elaboração do Fundo Nacional da Cultura Negra (FNCN) com recursos desvinculados do Orçamento Geral da União (OGU) sujeitos a contingenciamento; pela reserva de pelo menos 30% da grade de programação das emissoras públicas de rádio e TV (EBC e redes estaduais) para produções independentes financiadas pelo FNCN.",
   },
@@ -53,6 +56,7 @@ const agendaItems: AgendaItem[] = [
     icon: healthIcon,
     background: healthBackground,
     bgColor: "#4A2583",
+    rotation: 0,
     content:
       "Saúde não começa no hospital ou consultório. A saúde começa quando existe comida no prato, moradia digna, trabalho digno com direitos, cultura, lazer, transporte e um meio ambiente saudável. Vejo todos os dias que adoecer não é apenas uma questão individual: é consequência das desigualdades que atravessam a vida do nosso povo. Defender o SUS é defender uma das maiores conquistas da democracia brasileira. Vamos lutar pela revogação do Arcabouço Fiscal que limita investir em Saúde Pública; pelo investimento mínimo de 10% do PIB brasileiro tanto para a Saúde, quanto para a Educação; pela implementação de serviços de saúde mental, com a contratação de novos profissionais da área, em toda rede de atenção à saúde.",
   },
@@ -62,6 +66,7 @@ const agendaItems: AgendaItem[] = [
     icon: womenIcon,
     background: womenBackground,
     bgColor: "#243A3B",
+    rotation: -3,
     content:
       "A democracia não existe enquanto as mulheres continuam ganhando menos, trabalhando mais e vivendo sob a ameaça da violência. Defender as mulheres é defender autonomia, dignidade e justiça. É garantir acesso à saúde, combate à violência de gênero, igualdade de oportunidades e participação nos espaços de decisão. Como médica, sei que muitas desigualdades começam antes mesmo de sair de casa. Como mulher, sei que nossos direitos nunca foram presentes, sempre foram conquistas. Vamos enfrentar o machismo estrutural e construir um país onde nenhuma mulher tenha medo de existir, ocupar espaços ou sonhar. A luta feminista é uma luta por uma sociedade mais justa para todas as pessoas.",
   },
@@ -71,6 +76,7 @@ const agendaItems: AgendaItem[] = [
     icon: youthIcon,
     background: youthBackground,
     bgColor: "#CC037F",
+    rotation: 3.5,
     content:
       "A juventude não é o futuro, é o presente. E já passou da hora de ocupar os espaços de decisão. Somos a geração que enfrenta a crise climática, a precarização do trabalho, o adoecimento mental e a falta de oportunidades, mas também somos a geração que produz cultura, organiza movimentos, cria soluções e transforma territórios. A política precisa deixar de falar sobre os jovens e começar a construir com os jovens. Queremos educação, cultura, trabalho digno, ciência, esporte, participação popular e direito de sonhar sem precisar abandonar nossas raízes. Quando a juventude ocupa a política, o futuro deixa de ser promessa e começa a ser construção coletiva.",
   },
@@ -121,12 +127,15 @@ export default function AgendaSection() {
               <button
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
-                className="group @container relative aspect-square w-full cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
-                style={{
-                  backgroundColor: item.bgColor,
-                  color: "#FFFFFF",
-                  borderColor: "#FFFFFF",
-                }}
+                className="group @container relative aspect-square w-full [transform:rotate(var(--rotation))] cursor-pointer overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:[transform:rotate(var(--rotation))_scale(1.05)] hover:shadow-2xl focus:outline-2 focus:outline-offset-2 focus:outline-yellow-300"
+                style={
+                  {
+                    "--rotation": `${item.rotation}deg`,
+                    backgroundColor: item.bgColor,
+                    color: "#FFFFFF",
+                    borderColor: "#FFFFFF",
+                  } as React.CSSProperties
+                }
                 aria-label={`${item.title} - clique para mais informações`}
               >
                 <div className="flex h-full flex-col items-center justify-center gap-[5%] px-[6%] py-[10%]">
