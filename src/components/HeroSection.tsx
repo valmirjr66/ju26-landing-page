@@ -12,8 +12,9 @@ export default function HeroSection() {
     <>
       <section
         id="hero"
-        className="relative flex h-screen min-h-screen w-full flex-col items-center justify-end overflow-hidden pb-15"
+        className="relative flex h-screen min-h-screen w-full cursor-pointer flex-col items-center justify-end overflow-hidden pb-15"
         aria-label="Hero section - JU 5037"
+        onClick={() => setIsVideoOpen(true)}
         style={{
           backgroundImage: `url(${textureNature})`,
           backgroundSize: "cover",
@@ -33,16 +34,9 @@ export default function HeroSection() {
         />
 
         {/* Optional overlay to improve contrast */}
-        <div
-          className="absolute inset-0 bg-black/80"
-          aria-hidden="true"
-          onClick={() => setIsVideoOpen(true)}
-        />
+        <div className="absolute inset-0 bg-black/80" aria-hidden="true" />
 
-        <h1
-          className="absolute top-5 m-0 w-full max-w-full leading-none text-[0]"
-          onClick={() => setIsVideoOpen(true)}
-        >
+        <h1 className="absolute top-5 m-0 w-full max-w-full -rotate-2 leading-none text-[0]">
           <img
             src={horizontalLogo}
             alt="JU 5037"
@@ -53,7 +47,6 @@ export default function HeroSection() {
         {/* Center play button */}
         <button
           type="button"
-          onClick={() => setIsVideoOpen(true)}
           className="group absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 opacity-50 transition-transform duration-300 hover:scale-110 focus:ring-4 focus:ring-white/50 focus:outline-none"
           aria-label="Assistir ao vídeo"
         >
@@ -68,8 +61,7 @@ export default function HeroSection() {
         <button
           id="watch-now"
           type="button"
-          onClick={() => setIsVideoOpen(true)}
-          className="cta-button-pulse font-paper-crease relative z-10 rounded-xl border-3 px-5 py-2 text-[clamp(1.5rem,3.5vw,2.75rem)] transition-transform hover:scale-105 focus:ring-4 focus:ring-white/50 focus:outline-none"
+          className="cta-button-pulse font-paper-crease relative z-10 rotate-2 rounded-xl border-3 px-5 py-2 text-[clamp(1.5rem,3.5vw,2.75rem)] transition-transform hover:scale-105 focus:ring-4 focus:ring-white/50 focus:outline-none"
           aria-label="Assistir ao vídeo"
           style={{
             color: "#e0b423",

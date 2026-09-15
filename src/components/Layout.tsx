@@ -43,7 +43,7 @@ export default function Layout() {
             onClick={scrollToTop}
             aria-label="Voltar ao topo"
             title="Voltar ao topo"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-2"
           >
             <img
               id="header-logo"

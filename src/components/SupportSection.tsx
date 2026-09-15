@@ -87,7 +87,7 @@ export default function SupportSection() {
         }}
       >
         <div className="container mx-auto max-w-xl px-4 lg:max-w-6xl">
-          <h2 className="black-stroke-effect mb-12 text-center text-white">
+          <h2 className="black-stroke-effect mb-12 text-center text-white -rotate-2 ">
             COLA COM A GENTE!
           </h2>
 
