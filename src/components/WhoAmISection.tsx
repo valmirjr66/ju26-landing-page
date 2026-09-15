@@ -75,7 +75,7 @@ export default function WhoAmISection() {
             {/* Quem sou eu */}
             <div className="flex flex-col justify-between">
               <div>
-                <h3 className="white-stroke-effect mb-6 text-center text-black -rotate-1">
+                <h3 className="white-stroke-effect mb-6 -rotate-1 text-center text-black">
                   MAIS QUE O VULGO
                 </h3>
 
