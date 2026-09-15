@@ -52,7 +52,7 @@ export default function WhoAmISection() {
     <>
       <section
         id="who-am-i"
-        className="relative w-full overflow-hidden py-20 md:py-32"
+        className="relative w-full overflow-hidden py-15 md:py-15"
         aria-label="Seção Quem Sou Eu"
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -74,24 +74,16 @@ export default function WhoAmISection() {
             </h3>
 
             <p className="mb-8 text-justify leading-relaxed text-black">
-              Eu sou a Ju. Estou há 9 anos na luta coletiva, batalhando por
-              justiça social e climática.
-              <br />
-              <br />
-              Nasci e cresci em berço evangélico, onde aprendi sobre amor e
-              coletividade. Apesar da contradição da instituição Igreja, ainda
-              hoje o Jesus negro, amoroso, da periferia de Nazaré, permanece
-              guiando meus passos.
-              <br />
-              <br />
-              E foi um dos poucos mediciners negros da UIT que mudou o rumo da
-              minha vida: ele me convidou pra uma reunião do PSOL e me aplicou
-              no rap. Assim, me encontrei politicamente e me forjei dirigente.
-              <br />
-              <br />
-              Há 4 anos atrás descobri o Culture, um bar que reunia todo tipo de
-              galera, inclusive as mina do hip hop. E foi assim, que me tornei
-              artista e produtora cultural.
+              Eu sou a Ju. Há 9 anos, estou na luta coletiva por justiça social
+              e climática. Cresci em berço evangélico, onde aprendi sobre amor e
+              coletividade. Mesmo diante das contradições da Igreja, sigo guiada
+              pelo Jesus negro, amoroso e periférico de Nazaré.
+              <br />E foi um dos poucos mediciners negros da UIT que me convidou
+              para uma reunião do PSOL e me apresentou ao rap. Ali, me encontrei
+              politicamente e me forjei dirigente.
+              <br />Há 4 anos, descobri o
+              Culture, bar que reunia o hip hop. Foi ali que me tornei artista e
+              produtora cultural.
             </p>
 
             <div className="flex justify-end">
